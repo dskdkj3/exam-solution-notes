@@ -4,6 +4,7 @@
 
 ## 已发布材料
 
+- [2025-06 高等数学一（II）期末真题（B卷）](gaoshu1-ii/2025-06-final/)
 - [2024-06 高等数学一（II）期末真题](gaoshu1-ii/2024-06-final/)
 
 ## 目录结构
@@ -19,7 +20,8 @@ materials/
       02-多解法参考答案.md
       03-详解.md
       04-拓展讲解.md
-      05-纠错清单.md
+      05-A-B卷差异.md   # 可选：来源存在 A/B 卷或变体时
+      06-纠错清单.md
       manifest.json
 ```
 
@@ -28,6 +30,7 @@ materials/
 ```text
 materials/
   gaoshu1-ii/
+    2025-06-final/
     2024-06-final/
 ```
 

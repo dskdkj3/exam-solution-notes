@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "course": "高等数学一（II）",
+  "exam_month": "2025-06",
+  "exam_slug": "gaoshu1-ii-2025-06-final",
+  "display_title": "2025-06 高等数学一（II）期末真题（B卷）",
+  "primary_variant": "B卷",
+  "source_note": "主卷按低清原题扫描整理为 B 卷；清晰解析版用于交叉检查，并提供第 10、15 题 A 卷变体。原始 PDF、OCR dump、页图不随仓库发布。",
+  "files": {
+    "questions": {
+      "path": "01-仅题目.md",
+      "status": "agent_checked_draft"
+    },
+    "reference_solutions": {
+      "path": "02-多解法参考答案.md",
+      "status": "reference_checked_draft"
+    },
+    "guided_solutions": {
+      "path": "03-详解.md",
+      "status": "agent_checked_draft"
+    },
+    "teaching_notes": {
+      "path": "04-拓展讲解.md",
+      "status": "split_transfer_draft"
+    },
+    "variants": {
+      "path": "05-A-B卷差异.md",
+      "status": "draft_with_detected_variants"
+    },
+    "errata": {
+      "path": "06-纠错清单.md",
+      "status": "draft_with_candidate_items"
+    }
+  },
+  "variants": [
+    {
+      "id": "q010-a-volume",
+      "problem_number": 10,
+      "primary_variant": "B卷",
+      "variant": "A卷",
+      "source_pages": [
+        "source-11"
+      ],
+      "status": "recorded_with_answer",
+      "file": "05-A-B卷差异.md"
+    },
+    {
+      "id": "q015-a-volume",
+      "problem_number": 15,
+      "primary_variant": "B卷",
+      "variant": "A卷",
+      "source_pages": [
+        "source-17"
+      ],
+      "status": "recorded_with_answer",
+      "file": "05-A-B卷差异.md"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "q016-c001",
+      "problem_number": 16,
+      "status": "candidate_confirmed_by_agent_visual_check",
+      "category": "source_solution_typo",
+      "summary": "r^3-1=0 的实根应为 r_1=1"
+    }
+  ],
+  "answer_policy": {
+    "independent_first": true,
+    "source_reference_used": true,
+    "source_reference_status": "completed_unreviewed_source",
+    "note": "来源解析只作为 reference-check 材料，不作为权威答案。"
+  },
+  "alternate_method_policy": {
+    "max_rounds_per_problem": 10,
+    "status": "completed_agent_pass",
+    "rejected_methods": [
+      "q002-r001",
+      "q015-r001"
+    ]
+  },
+  "pdf_generation": {
+    "renderer": "pandoc 3.7.0.2 + xelatex/ctexart",
+    "status": "built",
+    "metadata_audit": {
+      "status": "audited_not_cleaned",
+      "tool": "mat2 --show",
+      "note": "Audit found generic LaTeX/pandoc/xdvipdfmx metadata and timestamps, without local paths, usernames, private URLs, or tokens."
+    }
+  },
+  "release": {
+    "status": "planned",
+    "tag": "gaoshu1-ii-2025-06-final-v1.0",
+    "version": "v1.0",
+    "url": "https://github.com/dskdkj3/exam-solution-notes/releases/tag/gaoshu1-ii-2025-06-final-v1.0",
+    "assets": {
+      "questions": {
+        "filename": "2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
+        "pages": 6,
+        "sha256": "24363143e0b925de9ff440c60f5dbf02e4866d0f2f0f9ab239175bd21a63b3e6"
+      },
+      "reference_solutions": {
+        "filename": "2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
+        "pages": 17,
+        "sha256": "2fa779a8d8cc728c72e051109903d0a830ac9963a9c8bc1df850d6e680966122"
+      },
+      "guided_solutions": {
+        "filename": "2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
+        "pages": 28,
+        "sha256": "1fc8df0c9b43f45fe8b4a5e9b43063d82f5751d0900f1f5156cd43be65cfeed7"
+      },
+      "teaching_notes": {
+        "filename": "2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
+        "pages": 9,
+        "sha256": "7242c392ed25eb0a4bd9eae6bc8b4155f4303ec89f7d784e99d959fefcddf3e2"
+      },
+      "variants": {
+        "filename": "2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
+        "pages": 3,
+        "sha256": "eb92bfa9b68877e1d032a45f94c502fe9c309577a9fe74cf5a4228b61c6b6e51"
+      },
+      "errata": {
+        "filename": "2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
+        "pages": 1,
+        "sha256": "307431de68ec338397ec7c40ba4c67112bf96973dd75707fa1d6cf69573dadd2"
+      },
+      "sha256sums": {
+        "filename": "SHA256SUMS.txt",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/SHA256SUMS.txt"
+      }
+    }
+  },
+  "quality_notes": [
+    "题面为 agent_checked_draft，尚未声明人工逐字审定。",
+    "答案先独立求解，再用来源解析做非权威 reference-check。",
+    "主卷是 B 卷；第 10、15 题 A 卷变体单独保留。",
+    "第 16 题来源解析特征根笔误已在纠错清单记录。"
+  ]
+}
