@@ -35,27 +35,27 @@
       "questions": {
         "filename": "questions.pdf",
         "pages": 2,
-        "sha256": "7e35998febaff476131c28d6324cca585944f294195c5790c3dc42525ec1746e"
+        "sha256": "9e010f937c8815b8beb104f4592bfe2d3ff100f2b5c2f84475e8d1ca30ab0c59"
       },
       "answers": {
         "filename": "answers.pdf",
         "pages": 35,
-        "sha256": "efeff4c1c3a829b8ce485193c3e7c5872ea4de3947282f72269cccef08ca5b26"
+        "sha256": "727b888f006a17ed1792b4c5bdc2d75109c658893c2364a4b4dd1616dbd0d50a"
       },
       "guided-solutions": {
         "filename": "guided-solutions.pdf",
         "pages": 18,
-        "sha256": "2bab1bc96da9f45d65f2ebdf83cd74f1f1c266551ced026281b7d484963bc51a"
+        "sha256": "1e29cbd14923e3f5b35502c18b9c050e54152364c9501ac30d3184d5b5e63093"
       },
       "teaching": {
         "filename": "teaching.pdf",
         "pages": 4,
-        "sha256": "3680b2d6a1bdc4ab751497a424a060814049a0a766ac13cf31c956fb35f6fe01"
+        "sha256": "9cb46b96327c775bf5c4bda346fe104c6555d6b239a3e48f124bd99a023cb2d7"
       },
       "corrections": {
         "filename": "corrections.pdf",
         "pages": 1,
-        "sha256": "9a717a8327a1c7ccb010be553c2f705439a1f0dfd47d9c68400434af769eab1c"
+        "sha256": "e60b30e1290f86f150683935be0761c2837c0e72a10663afd21ebe1d5ef8358f"
       }
     },
     "status": "pending_upload",
