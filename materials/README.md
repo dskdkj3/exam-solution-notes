@@ -4,7 +4,7 @@
 
 ## 已发布材料
 
-- [2023-06 高等数学一（II）期末真题](gaoshu1-ii/2023-06-final/)
+- [2024-06 高等数学一（II）期末真题](gaoshu1-ii/2024-06-final/)
 
 ## 目录结构
 
@@ -15,11 +15,11 @@ materials/
   <course-slug>/
     <yyyy-mm-exam-slug>/
       README.md
-      questions.md
-      answers.md
-      guided-solutions.md
-      teaching.md
-      corrections.md
+      01-仅题目.md
+      02-多解法参考答案.md
+      03-详解.md
+      04-拓展讲解.md
+      05-纠错清单.md
       manifest.json
 ```
 
@@ -28,7 +28,7 @@ materials/
 ```text
 materials/
   gaoshu1-ii/
-    2023-06-final/
+    2024-06-final/
 ```
 
 单套材料的 `README.md` 要直接告诉读者：

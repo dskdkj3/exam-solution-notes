@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "material_slug": "gaoshu1-ii/2024-06-final",
+  "title": "2024-06 高等数学一（II）期末真题",
+  "course": "高等数学一（II）",
+  "exam_month": "2024-06",
+  "exam_type": "final",
+  "status": "public_release_pending_upload",
+  "source_note": "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2024-06。",
+  "files": {
+    "questions": {
+      "path": "01-仅题目.md",
+      "status": "reviewed"
+    },
+    "answers": {
+      "path": "02-多解法参考答案.md",
+      "status": "multi_method_reference_checked_draft"
+    },
+    "guided_solutions": {
+      "path": "03-详解.md",
+      "status": "reader_friendly_draft"
+    },
+    "teaching": {
+      "path": "04-拓展讲解.md",
+      "status": "selective_transfer_draft"
+    },
+    "corrections": {
+      "path": "05-纠错清单.md",
+      "status": "confirmed_correction_log"
+    }
+  },
+  "release": {
+    "tag": "gaoshu1-ii-2024-06-final-v1.0",
+    "assets": {
+      "questions": {
+        "filename": "2024-06-高等数学一（II）期末真题-仅题目-v1.0.pdf",
+        "pages": 2,
+        "sha256": "27f12e4fe19c1776c3d10c6434a650545df142023726cec72fa4ff65092e7d4c"
+      },
+      "answers": {
+        "filename": "2024-06-高等数学一（II）期末真题-多解法参考答案-v1.0.pdf",
+        "pages": 35,
+        "sha256": "b7b59a8190701ba6657c2384a271528868fcf650c6c61fccb8eac142faafcb92"
+      },
+      "guided-solutions": {
+        "filename": "2024-06-高等数学一（II）期末真题-详解-v1.0.pdf",
+        "pages": 17,
+        "sha256": "952f624a9ca70f41ae7f55f768aea78638b454e877925dc7c8cca1cbaabe12d5"
+      },
+      "teaching": {
+        "filename": "2024-06-高等数学一（II）期末真题-拓展讲解-v1.0.pdf",
+        "pages": 4,
+        "sha256": "cf8eed1fbe688e42123706f5a8e515f4c5c7b5dd6788870af48dfd1dbccd68e7"
+      },
+      "corrections": {
+        "filename": "2024-06-高等数学一（II）期末真题-纠错清单-v1.0.pdf",
+        "pages": 1,
+        "sha256": "174ae88c3050d1b4c3f140be933f9864e03eb0ef373978c9c68cdc0969ac7eea"
+      }
+    },
+    "status": "pending_upload",
+    "note": "PDF files generated and staged for GitHub Release upload.",
+    "version": "v1.0",
+    "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes."
+  },
+  "quality_notes": [
+    "01-仅题目.md 已由用户复核通过。",
+    "02-多解法参考答案.md 为多解法参考答案，已做独立解题和来源解析 reference-check，但尚未逐字人工数学审定。",
+    "03-详解.md 为详解版，已展开主线，并移除机械的未展开参考解法清单；后续可继续补充真正值得选讲的备用解法。",
+    "04-拓展讲解.md 已改为精选拓展迁移版，不强行逐题占位。",
+    "05-纠错清单.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。",
+    "PDF 可见题头已使用 2024-06 公开题名；第 11 题两小问在预览中分行保留。"
+  ]
+}
