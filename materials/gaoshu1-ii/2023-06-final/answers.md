@@ -1,0 +1,1713 @@
+---
+title: "高数一（II）2023-06 期末"
+course: "高等数学一（II）"
+exam_month: "2023-06"
+source_note: "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2023-06。"
+run_slug: "23-gaoshu1-ii-final"
+stage: "markdown_draft"
+status: "draft"
+answer_status: "reference_checked_draft"
+answer_author: "agent"
+source_reference_used: true
+source_reference_trust: "unreviewed_source_explanations"
+reference_check_status: "completed_unreviewed_source"
+kind: "independent_answers"
+---
+
+# 高数一（II）2023-06 期末多解法参考答案草稿
+
+> 状态：reference_checked_draft。本文先基于已复核通过的 `questions.md` 独立解题，并保留多种有价值的参考解法，随后按用户授权参考未复核的 来源解析做 reference-check。来源解析仍不视为权威答案。
+
+## 1. 参考答案
+
+### 解法 A：按区域直接积分
+
+区域
+\[
+D=\{(x,y):0\le x\le \pi,\ 0\le y\le \sin x\}.
+\]
+因此
+\[
+\iint_D y\,dx\,dy
+=\int_0^\pi\int_0^{\sin x} y\,dy\,dx
+=\frac12\int_0^\pi \sin^2 x\,dx
+=\frac12\cdot\frac{\pi}{2}
+=\frac{\pi}{4}.
+\]
+
+### 解法 B：格林公式（Green 公式）转边界积分
+
+取
+\[
+P=-\frac{y^2}{2},\qquad Q=0.
+\]
+则
+\[
+\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=y.
+\]
+由格林公式，
+\[
+\iint_D y\,dA=\oint_{\partial D}P\,dx+Q\,dy
+=-\frac12\oint_{\partial D}y^2\,dx.
+\]
+边界按正向走时，$y=0$ 的部分贡献为 $0$；曲线 $y=\sin x$ 的方向是从 $x=\pi$ 到 $x=0$，所以
+\[
+-\frac12\int_{\pi}^{0}\sin^2x\,dx
+=\frac12\int_0^\pi\sin^2x\,dx
+=\frac{\pi}{4}.
+\]
+
+### 解法 C：变量代换成半圆区域
+
+令
+\[
+u=\cos x,\qquad v=y.
+\]
+当 $0\le x\le\pi$ 时，$u$ 从 $1$ 单调变到 $-1$，且
+\[
+\sin x=\sqrt{1-u^2}.
+\]
+区域变为
+\[
+-1\le u\le1,\qquad 0\le v\le\sqrt{1-u^2}.
+\]
+又
+\[
+\left|\frac{\partial(x,y)}{\partial(u,v)}\right|
+=\frac1{\sqrt{1-u^2}}.
+\]
+所以
+\[
+\iint_D y\,dA
+=\int_{-1}^{1}\int_0^{\sqrt{1-u^2}}
+\frac{v}{\sqrt{1-u^2}}\,dv\,du
+=\frac12\int_{-1}^{1}\sqrt{1-u^2}\,du.
+\]
+最后一个积分是上半单位圆面积，故
+\[
+\iint_D y\,dA=\frac12\cdot\frac{\pi}{2}=\frac{\pi}{4}.
+\]
+
+## 2. 参考答案
+
+### 解法 A：球对称性
+
+展开被积函数：
+\[
+(x+y+z)^2=x^2+y^2+z^2+2xy+2yz+2zx.
+\]
+在单位球 $\Omega$ 上，$xy,yz,zx$ 都是关于某个坐标变量的奇函数，积分为 $0$。所以
+\[
+I=\iiint_\Omega (x^2+y^2+z^2)\,dV
+=\iiint_\Omega r^2\,dV.
+\]
+用球坐标，
+\[
+I=\int_0^1 r^2\cdot 4\pi r^2\,dr
+=4\pi\int_0^1 r^4\,dr
+=\frac{4\pi}{5}.
+\]
+
+### 解法 B：分量对称性
+
+由对称性
+\[
+\iiint_\Omega x^2\,dV=\iiint_\Omega y^2\,dV=\iiint_\Omega z^2\,dV,
+\]
+且交叉项积分为 $0$。于是
+\[
+I=3\iiint_\Omega z^2\,dV.
+\]
+对固定 $z$，截面面积为 $\pi(1-z^2)$，故
+\[
+I=3\int_{-1}^{1}z^2\pi(1-z^2)\,dz
+=6\pi\int_0^1(z^2-z^4)\,dz
+=6\pi\left(\frac13-\frac15\right)
+=\frac{4\pi}{5}.
+\]
+
+### 解法 C：散度定理与齐次函数
+
+令
+\[
+L=x+y+z,\qquad f=L^2.
+\]
+$f$ 是二次齐次函数。取向量场
+\[
+\mathbf F=(x,y,z)f.
+\]
+由欧拉齐次函数关系，
+\[
+\nabla\cdot\mathbf F
+=3f+(x,y,z)\cdot\nabla f
+=3f+2f=5f.
+\]
+因此
+\[
+I=\iiint_\Omega f\,dV
+=\frac15\iint_{\partial\Omega} f\,dS.
+\]
+在单位球面上，把极轴取在 $(1,1,1)$ 方向，则
+\[
+L=\sqrt3\cos\theta.
+\]
+所以
+\[
+I=\frac15\iint_{\partial\Omega}3\cos^2\theta\,dS
+=\frac15\cdot3\cdot2\pi\int_0^\pi\cos^2\theta\sin\theta\,d\theta
+=\frac{4\pi}{5}.
+\]
+
+### 解法 D：正交旋转到对角轴
+
+令
+\[
+u=\frac{x+y+z}{\sqrt3}.
+\]
+这可以看作把坐标轴正交旋转，使新的 $u$ 轴沿 $(1,1,1)$ 方向。单位球在正交旋转下仍是单位球，体积元不变。于是
+\[
+(x+y+z)^2=3u^2,
+\]
+从而
+\[
+I=3\iiint_{\Omega}u^2\,dV.
+\]
+对固定 $u$，截面圆面积为 $\pi(1-u^2)$，所以
+\[
+I=3\int_{-1}^{1}u^2\pi(1-u^2)\,du
+=6\pi\int_0^1(u^2-u^4)\,du
+=\frac{4\pi}{5}.
+\]
+
+### 解法 E：二阶矩视角
+
+单位球关于各个方向完全对称，所以对单位球内的均匀点 $X=(X_1,X_2,X_3)$，有
+\[
+E[X_1^2]=E[X_2^2]=E[X_3^2],\qquad E[X_iX_j]=0\ (i\ne j).
+\]
+又
+\[
+E[X_1^2+X_2^2+X_3^2]
+=E[r^2]
+=\frac{\int_0^1 r^2\cdot 4\pi r^2\,dr}{\int_0^1 4\pi r^2\,dr}
+=\frac35.
+\]
+因此
+\[
+E[X_1^2]=E[X_2^2]=E[X_3^2]=\frac15.
+\]
+令 $a=(1,1,1)$，则
+\[
+E[(a\cdot X)^2]=\frac{|a|^2}{5}=\frac35.
+\]
+乘上单位球体积 $4\pi/3$，得到
+\[
+I=\frac{4\pi}{3}\cdot\frac35=\frac{4\pi}{5}.
+\]
+
+### 解法 F：调和分解
+
+记
+\[
+L=x+y+z,\qquad r^2=x^2+y^2+z^2.
+\]
+因为
+\[
+\Delta(L^2)=2|\nabla L|^2=6,\qquad \Delta(r^2)=6,
+\]
+所以
+\[
+H=L^2-r^2
+\]
+是调和函数，且 $H(0)=0$。由调和函数在球上的平均值性质，
+\[
+\iiint_{\Omega}H\,dV=0.
+\]
+因此
+\[
+\iiint_\Omega (x+y+z)^2\,dV
+=\iiint_\Omega r^2\,dV
+=4\pi\int_0^1r^4\,dr
+=\frac{4\pi}{5}.
+\]
+
+### 解法 G：柱坐标直接计算
+
+用柱坐标
+\[
+x=\rho\cos\theta,\qquad y=\rho\sin\theta,\qquad dV=\rho\,dz\,d\theta\,d\rho.
+\]
+单位球可写成
+\[
+0\le\rho\le1,\qquad -\sqrt{1-\rho^2}\le z\le\sqrt{1-\rho^2},\qquad 0\le\theta\le2\pi.
+\]
+记 $a=\sqrt{1-\rho^2}$。因为
+\[
+x+y+z=\rho(\cos\theta+\sin\theta)+z,
+\]
+先对 $\theta$ 积分：
+\[
+\int_0^{2\pi}\bigl[\rho(\cos\theta+\sin\theta)+z\bigr]^2\,d\theta
+=2\pi(\rho^2+z^2).
+\]
+于是
+\[
+I=\int_0^1\int_{-a}^{a}2\pi(\rho^2+z^2)\rho\,dz\,d\rho.
+\]
+继续算得
+\[
+I=4\pi\int_0^1\rho^3\sqrt{1-\rho^2}\,d\rho
++\frac{4\pi}{3}\int_0^1\rho(1-\rho^2)^{3/2}\,d\rho.
+\]
+而
+\[
+\int_0^1\rho^3\sqrt{1-\rho^2}\,d\rho=\frac{2}{15},\qquad
+\int_0^1\rho(1-\rho^2)^{3/2}\,d\rho=\frac15.
+\]
+所以
+\[
+I=4\pi\cdot\frac{2}{15}+\frac{4\pi}{3}\cdot\frac15
+=\frac{4\pi}{5}.
+\]
+
+## 3. 参考答案
+
+### 解法 A：直接求傅里叶系数（Fourier 系数）
+
+采用
+\[
+f(x)\sim \frac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx).
+\]
+因为 $f(x)=x^2$ 在 $[0,2\pi)$ 上给出，
+\[
+a_0=\frac{1}{\pi}\int_0^{2\pi}x^2\,dx=\frac{8\pi^2}{3},
+\]
+\[
+a_n=\frac{1}{\pi}\int_0^{2\pi}x^2\cos nx\,dx=\frac{4}{n^2},
+\]
+\[
+b_n=\frac{1}{\pi}\int_0^{2\pi}x^2\sin nx\,dx=-\frac{4\pi}{n}.
+\]
+所以傅里叶级数为
+\[
+f(x)\sim
+\frac{4\pi^2}{3}
++4\sum_{n=1}^{\infty}\frac{\cos nx}{n^2}
+-4\pi\sum_{n=1}^{\infty}\frac{\sin nx}{n}.
+\]
+
+和函数按周期延拓的左右极限取平均：
+\[
+S(x)=
+\begin{cases}
+(x-2k\pi)^2, & 2k\pi<x<2(k+1)\pi,\ k\in\mathbb Z,\\[4pt]
+2\pi^2, & x=2k\pi,\ k\in\mathbb Z.
+\end{cases}
+\]
+
+### 解法 B：利用标准展开平移校验
+
+令
+\[
+t=x-\pi,\qquad x=t+\pi.
+\]
+在 $[-\pi,\pi]$ 上有标准展开
+\[
+t^2\sim \frac{\pi^2}{3}
++4\sum_{n=1}^{\infty}\frac{(-1)^n\cos nt}{n^2},
+\]
+\[
+t\sim 2\sum_{n=1}^{\infty}\frac{(-1)^{n+1}\sin nt}{n}.
+\]
+因为
+\[
+x^2=(t+\pi)^2=t^2+2\pi t+\pi^2,
+\]
+且
+\[
+\cos n(x-\pi)=(-1)^n\cos nx,\qquad
+\sin n(x-\pi)=(-1)^n\sin nx,
+\]
+代入可得
+\[
+x^2\sim
+\frac{4\pi^2}{3}
++4\sum_{n=1}^{\infty}\frac{\cos nx}{n^2}
+-4\pi\sum_{n=1}^{\infty}\frac{\sin nx}{n}.
+\]
+和函数仍按周期延拓取值；在 $x=2k\pi$ 处取左右极限平均，得到 $2\pi^2$。
+
+## 4. 参考答案
+
+### 解法 A：补面后用高斯公式（Gauss 公式）
+
+把曲面积分看作向量场
+\[
+\mathbf F=(P,Q,R)=(y-z,\ z-x,\ x-y^2)
+\]
+穿过曲面的通量。其散度为
+\[
+\nabla\cdot\mathbf F
+=\frac{\partial}{\partial x}(y-z)
++\frac{\partial}{\partial y}(z-x)
++\frac{\partial}{\partial z}(x-y^2)=0.
+\]
+锥面 $S$ 不是闭曲面。补上顶盖
+\[
+S_1:\ z=1,\quad x^2+y^2\le 1,
+\]
+则 $S\cup S_1$ 为闭曲面。由高斯公式，
+\[
+\iint_{S^+}\mathbf F\cdot d\mathbf S
++\iint_{S_1^+}\mathbf F\cdot d\mathbf S=0.
+\]
+在 $S_1$ 上外法向为 $+\mathbf k$，所以顶盖通量为
+\[
+\iint_{S_1^+}\mathbf F\cdot d\mathbf S
+=\iint_{x^2+y^2\le 1}(x-y^2)\,dx\,dy.
+\]
+其中
+\[
+\iint_D x\,dx\,dy=0,\qquad
+\iint_D y^2\,dx\,dy
+=\int_0^{2\pi}\int_0^1 r^2\sin^2\theta\cdot r\,dr\,d\theta
+=\frac{\pi}{4}.
+\]
+因此顶盖通量为 $-\pi/4$，原曲面通量为
+\[
+I=-\left(-\frac{\pi}{4}\right)=\frac{\pi}{4}.
+\]
+
+### 解法 B：直接参数化锥面
+
+取
+\[
+\mathbf r(z,\theta)=(z\cos\theta,z\sin\theta,z),
+\qquad 0\le z\le1,\quad 0\le\theta\le2\pi.
+\]
+外侧法向面积元可取
+\[
+\mathbf r_\theta\times\mathbf r_z
+=(z\cos\theta,z\sin\theta,-z)\,d\theta\,dz,
+\]
+它的径向分量向外，符合题目外侧方向。
+
+在锥面上
+\[
+\mathbf F=(y-z,\ z-x,\ x-y^2)
+=\bigl(z(\sin\theta-1),\ z(1-\cos\theta),\ z\cos\theta-z^2\sin^2\theta\bigr).
+\]
+于是
+\[
+\mathbf F\cdot(\mathbf r_\theta\times\mathbf r_z)
+=z^2(\sin\theta-2\cos\theta)+z^3\sin^2\theta.
+\]
+前两项对 $\theta$ 在 $[0,2\pi]$ 上积分为 $0$，所以
+\[
+I=\int_0^1\int_0^{2\pi}z^3\sin^2\theta\,d\theta\,dz
+=\int_0^1\pi z^3\,dz
+=\frac{\pi}{4}.
+\]
+
+### 解法 C：投影到 $xy$ 平面
+
+锥面可看作图面
+\[
+z=f(x,y)=\sqrt{x^2+y^2}=r,
+\qquad x^2+y^2\le1.
+\]
+外侧对应实体锥的侧面向外且向下，所以有向面积元为
+\[
+(f_x,f_y,-1)\,dx\,dy
+=\left(\frac{x}{r},\frac{y}{r},-1\right)dx\,dy.
+\]
+于是通量为
+\[
+\iint_D\left[
+(y-r)\frac{x}{r}
++(r-x)\frac{y}{r}
+-(x-y^2)
+\right]dx\,dy.
+\]
+化简 integrand：
+\[
+(y-r)\frac{x}{r}+(r-x)\frac{y}{r}-(x-y^2)
+=y-2x+y^2.
+\]
+在单位圆盘 $D$ 上，$x$ 与 $y$ 的积分均为 $0$，所以
+\[
+I=\iint_D y^2\,dx\,dy
+=\frac{\pi}{4}.
+\]
+顶点 $r=0$ 处的奇性可去掉小圆盘后取极限，不影响积分值。
+
+### 解法 D：向量势与斯托克斯公式（Stokes 公式）
+
+因为
+\[
+\nabla\cdot\mathbf F=0,
+\]
+可以取向量势
+\[
+\mathbf A=\left(\frac{z^2}{2}-xz,\ -yz+\frac{z^2}{2}+\frac{x^2}{2}-xy^2,\ 0\right),
+\]
+直接验算有
+\[
+\nabla\times\mathbf A=\mathbf F.
+\]
+于是
+\[
+\iint_S\mathbf F\cdot\mathbf n\,dS
+=\oint_{\partial S}\mathbf A\cdot d\mathbf r.
+\]
+边界圆为
+\[
+x=\cos\theta,\quad y=\sin\theta,\quad z=1.
+\]
+若按 $\theta$ 递增方向计算，可得
+\[
+\oint_{\partial S}\mathbf A\cdot d\mathbf r=-\frac{\pi}{4}.
+\]
+但锥面外侧诱导的边界方向从上方看为顺时针，即与 $\theta$ 递增方向相反，所以
+\[
+I=\frac{\pi}{4}.
+\]
+
+### 解法 E：分项投影与对称抵消
+
+把二类曲面积分分成三项：
+\[
+I=I_1+I_2+I_3.
+\]
+其中
+\[
+I_1=\iint_S (y-z)\,dy\,dz.
+\]
+投影到 $yz$ 平面时，除边界外每点对应两片
+\[
+x=\pm\sqrt{z^2-y^2}.
+\]
+这两片的外侧法向 $x$ 分量符号相反，而 $y-z$ 与 $x$ 无关，所以两片贡献相消，$I_1=0$。
+
+同理
+\[
+I_2=\iint_S (z-x)\,dz\,dx
+\]
+投影到 $zx$ 平面时，两片 $y=\pm\sqrt{z^2-x^2}$ 的外侧法向 $y$ 分量符号相反，而 $z-x$ 与 $y$ 无关，所以 $I_2=0$。
+
+最后
+\[
+I_3=\iint_S (x-y^2)\,dx\,dy.
+\]
+锥面外侧的 $z$ 分量向下，投影到单位圆盘 $D:x^2+y^2\le1$ 时有
+\[
+dx\,dy=-dA.
+\]
+因此
+\[
+I_3=-\iint_D(x-y^2)\,dA
+=\iint_D y^2\,dA
+=\frac{\pi}{4}.
+\]
+故
+\[
+I=\frac{\pi}{4}.
+\]
+
+## 5. 参考答案
+
+### 解法 A：利用恰当微分
+
+记
+\[
+P(x,y)=x^2+y,\qquad Q(x,y)=x+y^2\sin^3 y.
+\]
+有
+\[
+\frac{\partial P}{\partial y}=1,\qquad
+\frac{\partial Q}{\partial x}=1,
+\]
+所以该微分形式在全平面上恰当，积分与路径无关。
+
+于是可把路径换成从 $(2,0)$ 到 $(0,0)$ 的线段 $y=0$。此时 $dy=0$，故
+\[
+\int_L P\,dx+Q\,dy
+=\int_{2}^{0}x^2\,dx
+=-\frac{8}{3}.
+\]
+
+### 解法 B：写出势函数
+
+势函数可取
+\[
+\Phi(x,y)=\frac{x^3}{3}+xy+\int_0^y t^2\sin^3 t\,dt.
+\]
+则
+\[
+\int_L P\,dx+Q\,dy=\Phi(0,0)-\Phi(2,0)
+=0-\frac{8}{3}
+=-\frac{8}{3}.
+\]
+
+### 解法 C：直接参数化半圆
+
+曲线 $L$ 可参数化为
+\[
+x=1+\cos t,\qquad y=\sin t,\qquad 0\le t\le\pi,
+\]
+方向正好是从 $(2,0)$ 到 $(0,0)$。于是
+\[
+dx=-\sin t\,dt,\qquad dy=\cos t\,dt.
+\]
+代入积分：
+\[
+\int_0^\pi
+\left[((1+\cos t)^2+\sin t)(-\sin t)
++(1+\cos t+\sin^2t\sin^3(\sin t))\cos t\right]dt.
+\]
+展开后，含
+\[
+-2\sin t\cos t,\quad \cos t,\quad -\sin^2t+\cos^2t
+\]
+的项在 $[0,\pi]$ 上积分均为 $0$；最后一项
+\[
+\sin^2t\sin^3(\sin t)\cos t
+\]
+关于 $t=\pi/2$ 反对称，积分也为 $0$。剩下
+\[
+-\int_0^\pi\sin t\,dt-\int_0^\pi\sin t\cos^2t\,dt
+=-2-\frac23
+=-\frac83.
+\]
+
+### 解法 D：沿原曲线识别全导数
+
+直接把 $y=\sqrt{x(2-x)}$ 看成 $x$ 的函数，方向为 $x:2\to0$。原积分写成
+\[
+I=\int_2^0
+\left[x^2+y+(x+y^2\sin^3y)y'\right]dx.
+\]
+拆开：
+\[
+I=\int_2^0 x^2\,dx
++\int_2^0 (y+xy')\,dx
++\int_2^0 y^2\sin^3y\,y'\,dx.
+\]
+其中
+\[
+y+xy'=(xy)',
+\]
+而若 $H'(y)=y^2\sin^3y$，则
+\[
+y^2\sin^3y\,y'=(H(y))'.
+\]
+由于端点 $y(2)=y(0)=0$，
+\[
+[xy]_2^0=0,\qquad [H(y)]_2^0=0.
+\]
+故只剩
+\[
+I=\int_2^0x^2\,dx=-\frac83.
+\]
+
+### 解法 E：按高度配对左右半弧
+
+令
+\[
+u=\sqrt{1-y^2}.
+\]
+右半弧为 $x_R=1+u$，方向 $y:0\to1$；左半弧为 $x_L=1-u$，方向 $y:1\to0$。把左半弧反向改写成 $y:0\to1$ 后合并两段。
+
+因为
+\[
+\frac{dx_R}{dy}=-\frac{y}{u},\qquad
+\frac{dx_L}{dy}=\frac{y}{u},
+\]
+且 $y^2\sin^3y\,dy$ 在左右两段方向相反，会相互抵消。整理得
+\[
+I=\int_0^1\left[
+2u-\frac{4y-2y^3+2y^2}{u}
+\right]dy.
+\]
+逐项积分：
+\[
+\int_0^1 2\sqrt{1-y^2}\,dy=\frac{\pi}{2},
+\]
+\[
+\int_0^1\frac{4y}{\sqrt{1-y^2}}\,dy=4,\qquad
+\int_0^1\frac{2y^3}{\sqrt{1-y^2}}\,dy=\frac43,
+\]
+\[
+\int_0^1\frac{2y^2}{\sqrt{1-y^2}}\,dy=\frac{\pi}{2}.
+\]
+所以
+\[
+I=\frac{\pi}{2}-4+\frac43-\frac{\pi}{2}
+=-\frac83.
+\]
+
+### 解法 F：闭合曲线的面积公式分项法
+
+把积分拆成
+\[
+I=\int_L x^2\,dx+\int_L y\,dx+\int_L x\,dy+\int_L y^2\sin^3y\,dy.
+\]
+其中
+\[
+\int_L x^2\,dx=\left[\frac{x^3}{3}\right]_{2}^{0}=-\frac83.
+\]
+若 $F'(y)=y^2\sin^3y$，则端点 $y$ 坐标同为 $0$，所以
+\[
+\int_L y^2\sin^3y\,dy=F(0)-F(0)=0.
+\]
+
+再用从 $(0,0)$ 到 $(2,0)$ 的线段 $S$ 补成闭合曲线
+\[
+C=L+S.
+\]
+这是上半圆盘的正向边界，面积为 $\pi/2$。在线段 $S$ 上，$y=0$ 且 $dy=0$，所以
+\[
+\int_L y\,dx=\oint_C y\,dx=-\frac{\pi}{2},
+\qquad
+\int_L x\,dy=\oint_C x\,dy=\frac{\pi}{2}.
+\]
+两项相消，故
+\[
+I=-\frac83-\frac{\pi}{2}+\frac{\pi}{2}+0
+=-\frac83.
+\]
+
+## 6. 参考答案
+
+### 解法 A：参数化线段
+
+令
+\[
+x=1-t,\qquad y=2t,\qquad 0\le t\le 1.
+\]
+则
+\[
+ds=\sqrt{(-1)^2+2^2}\,dt=\sqrt5\,dt,
+\]
+且
+\[
+x+y=1-t+2t=1+t.
+\]
+所以
+\[
+\int_L(x+y)\,ds
+=\sqrt5\int_0^1(1+t)\,dt
+=\frac{3\sqrt5}{2}.
+\]
+
+### 解法 B：线性函数在线段上的平均值
+
+$x+y$ 是线性函数，沿线段的平均值等于端点值的平均：
+\[
+(x+y)(A)=1,\qquad (x+y)(B)=2.
+\]
+线段长为 $\sqrt5$，因此
+\[
+\int_L(x+y)\,ds
+=\sqrt5\cdot\frac{1+2}{2}
+=\frac{3\sqrt5}{2}.
+\]
+
+### 解法 C：直接用 $u=x+y$ 换元
+
+令
+\[
+u=x+y.
+\]
+线段从 $A(1,0)$ 到 $B(0,2)$ 的单位切向量为
+\[
+\mathbf e=\frac{(-1,2)}{\sqrt5}.
+\]
+沿线段按弧长 $s$ 求导，
+\[
+\frac{du}{ds}
+=\nabla(x+y)\cdot\mathbf e
+=(1,1)\cdot\frac{(-1,2)}{\sqrt5}
+=\frac1{\sqrt5}.
+\]
+因此
+\[
+ds=\sqrt5\,du.
+\]
+端点处 $u$ 从 $1$ 变到 $2$，故
+\[
+\int_L(x+y)\,ds
+=\sqrt5\int_1^2u\,du
+=\frac{3\sqrt5}{2}.
+\]
+
+### 解法 D：通量转化法
+
+取三角形区域 $T$，顶点为
+\[
+O(0,0),\quad A(1,0),\quad B(0,2).
+\]
+在线段 $AB$ 上，外法向单位向量为
+\[
+\mathbf n=\frac{(2,1)}{\sqrt5}.
+\]
+构造平面向量场
+\[
+\mathbf F=(0,\sqrt5(x+y)).
+\]
+则在 $AB$ 上
+\[
+\mathbf F\cdot\mathbf n=x+y.
+\]
+所以目标积分是 $\mathbf F$ 通过边 $AB$ 的通量。
+
+由格林公式的通量形式，
+\[
+\oint_{\partial T}\mathbf F\cdot\mathbf n\,ds
+=\iint_T\nabla\cdot\mathbf F\,dA
+=\iint_T\sqrt5\,dA
+=\sqrt5,
+\]
+因为三角形面积为 $1$。边 $OB$ 上 $x=0$ 且外法向为 $(-1,0)$，通量为 $0$。边 $OA$ 上 $y=0$，外法向为 $(0,-1)$，通量为
+\[
+\int_0^1-\sqrt5 x\,dx=-\frac{\sqrt5}{2}.
+\]
+因此
+\[
+\int_{AB}(x+y)\,ds
+=\sqrt5-\left(-\frac{\sqrt5}{2}\right)
+=\frac{3\sqrt5}{2}.
+\]
+
+## 7. 参考答案
+
+### 解法 A：一阶线性方程积分因子
+
+方程为
+\[
+y'+xy=x.
+\]
+积分因子
+\[
+\mu(x)=e^{\int x\,dx}=e^{x^2/2}.
+\]
+于是
+\[
+\left(e^{x^2/2}y\right)'=xe^{x^2/2}.
+\]
+积分得
+\[
+e^{x^2/2}y=e^{x^2/2}+C,
+\]
+所以通解为
+\[
+y=1+Ce^{-x^2/2}.
+\]
+
+### 解法 B：改写成可分离变量
+
+原方程也可写成
+\[
+y'=x(1-y).
+\]
+当 $y\ne1$ 时分离变量：
+\[
+\frac{dy}{1-y}=x\,dx.
+\]
+积分得
+\[
+-\ln|1-y|=\frac{x^2}{2}+C.
+\]
+因此
+\[
+1-y=Ce^{-x^2/2},
+\]
+也就是
+\[
+y=1+Ce^{-x^2/2}.
+\]
+常数解 $y=1$ 已包含在 $C=0$ 中。
+
+### 解法 C：幂级数复核
+
+设
+\[
+y=\sum_{n=0}^{\infty}a_nx^n.
+\]
+代入 $y'+xy=x$，得
+\[
+\sum_{n=0}^{\infty}(n+1)a_{n+1}x^n
++\sum_{n=1}^{\infty}a_{n-1}x^n=x.
+\]
+比较系数：
+\[
+a_1=0,\qquad 2a_2+a_0=1,
+\]
+且对 $n\ge2$，
+\[
+(n+1)a_{n+1}+a_{n-1}=0.
+\]
+由此所有奇次项为 $0$，偶次项重组成
+\[
+y=1+(a_0-1)\sum_{k=0}^{\infty}\frac{(-1)^kx^{2k}}{2^k k!}
+=1+Ce^{-x^2/2}.
+\]
+
+## 8. 参考答案
+
+### 解法 A：常系数非齐次方程
+
+齐次方程
+\[
+y''+9y=0
+\]
+的特征根为 $\lambda=\pm 3i$，故
+\[
+y_h=C_1\cos 3x+C_2\sin 3x.
+\]
+设特解
+\[
+y_p=Ae^{5x}.
+\]
+代入得
+\[
+25Ae^{5x}+9Ae^{5x}=e^{5x},
+\]
+所以
+\[
+A=\frac1{34}.
+\]
+通解为
+\[
+y=C_1\cos 3x+C_2\sin 3x+\frac1{34}e^{5x}.
+\]
+
+### 解法 B：常数变易的卷积形式
+
+对
+\[
+y''+9y=f(x)
+\]
+零初值响应核为
+\[
+G(x)=\frac13\sin3x.
+\]
+因此一个特解可写为
+\[
+y_p=\int_0^x\frac13\sin(3(x-t))e^{5t}\,dt.
+\]
+计算得
+\[
+y_p=\frac{e^{5x}}{34}-\frac{\cos3x}{34}-\frac{5\sin3x}{102}.
+\]
+后两项属于齐次解，可并入 $C_1\cos3x+C_2\sin3x$，所以通解仍为
+\[
+y=C_1\cos3x+C_2\sin3x+\frac1{34}e^{5x}.
+\]
+
+### 解法 C：复一阶因子分解
+
+把算子分解为
+\[
+D^2+9=(D-3i)(D+3i).
+\]
+令
+\[
+u=(D+3i)y=y'+3iy.
+\]
+则方程变成
+\[
+u'-3iu=e^{5x}.
+\]
+解这个一阶线性方程，可得
+\[
+u=C e^{3ix}+\frac{e^{5x}}{5-3i}.
+\]
+再解
+\[
+y'+3iy=u.
+\]
+得到
+\[
+y=\frac{e^{5x}}{34}+C_1e^{3ix}+C_2e^{-3ix}.
+\]
+取实值形式，即
+\[
+y=C_1\cos3x+C_2\sin3x+\frac1{34}e^{5x}.
+\]
+
+### 解法 D：拉普拉斯变换（Laplace 变换）法
+
+设
+\[
+y(0)=a,\qquad y'(0)=b,\qquad \mathcal L\{y\}=Y(s).
+\]
+对方程取拉普拉斯变换：
+\[
+(s^2Y-sa-b)+9Y=\frac1{s-5}.
+\]
+因此
+\[
+Y=\frac{sa+b}{s^2+9}
++\frac{1}{(s-5)(s^2+9)}.
+\]
+第一项反变换给出齐次解。第二项可分解为
+\[
+\frac{1}{(s-5)(s^2+9)}
+=\frac{1}{34}\frac{1}{s-5}
+-\frac{1}{34}\frac{s}{s^2+9}
+-\frac{5}{34}\frac{1}{s^2+9}.
+\]
+反变换后为
+\[
+\frac1{34}e^{5x}-\frac1{34}\cos3x-\frac{5}{102}\sin3x.
+\]
+其中三角函数项可并入齐次解，所以通解为
+\[
+y=C_1\cos3x+C_2\sin3x+\frac1{34}e^{5x}.
+\]
+
+### 解法 E：幂级数法
+
+设
+\[
+y=\sum_{n=0}^{\infty}a_nx^n,\qquad e^{5x}=\sum_{n=0}^{\infty}\frac{5^n}{n!}x^n.
+\]
+代入
+\[
+y''+9y=e^{5x}
+\]
+并比较 $x^n$ 的系数，得
+\[
+(n+2)(n+1)a_{n+2}+9a_n=\frac{5^n}{n!}.
+\]
+
+先取一个特解系数
+\[
+p_n=\frac{5^n}{34n!}.
+\]
+因为
+\[
+(n+2)(n+1)p_{n+2}+9p_n
+=\frac{25\cdot5^n}{34n!}+\frac{9\cdot5^n}{34n!}
+=\frac{5^n}{n!},
+\]
+所以
+\[
+\sum_{n=0}^\infty p_nx^n=\frac1{34}e^{5x}
+\]
+是一个特解。
+
+令 $b_n=a_n-p_n$，则
+\[
+(n+2)(n+1)b_{n+2}+9b_n=0.
+\]
+由 $b_0=A,\ b_1=B$ 递推得
+\[
+b_{2k}=A(-1)^k\frac{3^{2k}}{(2k)!},\qquad
+b_{2k+1}=B(-1)^k\frac{3^{2k}}{(2k+1)!}.
+\]
+因此
+\[
+\sum b_{2k}x^{2k}=A\cos3x,\qquad
+\sum b_{2k+1}x^{2k+1}=\frac{B}{3}\sin3x.
+\]
+通解为
+\[
+y=C_1\cos3x+C_2\sin3x+\frac1{34}e^{5x}.
+\]
+
+## 9. 参考答案
+
+### 解法 A：莱布尼茨判别法（Leibniz 判别法）和绝对收敛判别
+
+令
+\[
+u_n=\frac{2n+1}{n(n+1)}=\frac1n+\frac1{n+1}.
+\]
+显然 $u_n>0$、$u_n\downarrow 0$。因此交错级数
+\[
+\sum_{n=1}^{\infty}(-1)^{n-1}u_n
+\]
+由莱布尼茨判别法收敛。
+
+再看绝对收敛：
+\[
+\sum_{n=1}^{\infty}\left|(-1)^{n-1}\frac{2n+1}{n(n+1)}\right|
+=\sum_{n=1}^{\infty}\left(\frac1n+\frac1{n+1}\right),
+\]
+该级数与调和级数同阶，发散。因此原级数条件收敛。
+
+### 解法 B：有限部分和错位相消
+
+因为
+\[
+\frac{2n+1}{n(n+1)}=\frac1n+\frac1{n+1},
+\]
+第 $N$ 个部分和为
+\[
+S_N=\sum_{n=1}^{N}(-1)^{n-1}
+\left(\frac1n+\frac1{n+1}\right).
+\]
+展开后中间项两两抵消，得到
+\[
+S_N=1+\frac{(-1)^{N-1}}{N+1}.
+\]
+因此
+\[
+\lim_{N\to\infty}S_N=1,
+\]
+原级数收敛。
+
+绝对值级数为
+\[
+\sum_{n=1}^{\infty}\left(\frac1n+\frac1{n+1}\right),
+\]
+发散，所以原级数条件收敛。
+
+### 解法 C：积分表示与有限几何和
+
+利用
+\[
+\frac1n+\frac1{n+1}
+=\int_0^1(1+x)x^{n-1}\,dx.
+\]
+第 $N$ 个部分和为
+\[
+S_N=\int_0^1(1+x)\sum_{n=1}^{N}(-x)^{n-1}\,dx.
+\]
+有限几何和给出
+\[
+(1+x)\sum_{n=1}^{N}(-x)^{n-1}=1-(-x)^N.
+\]
+因此
+\[
+S_N=\int_0^1(1-(-x)^N)\,dx
+=1-\frac{(-1)^N}{N+1}.
+\]
+所以 $S_N\to1$，原级数收敛。绝对值级数仍与调和级数同阶，故原级数条件收敛。
+
+### 解法 D：欧拉变换（Euler 变换）与凝聚判别
+
+记
+\[
+b_n=\frac{2n+1}{n(n+1)}=\frac1n+\frac1{n+1}.
+\]
+原级数为
+\[
+\sum_{n=1}^{\infty}(-1)^{n-1}b_n.
+\]
+对递减正项序列可用欧拉变换。令
+\[
+\Delta b_n=b_n-b_{n+1}.
+\]
+由
+\[
+\Delta^k\left(\frac1n\right)\bigg|_{n=1}=\frac1{k+1},\qquad
+\Delta^k\left(\frac1{n+1}\right)\bigg|_{n=1}=\frac1{(k+1)(k+2)},
+\]
+可得
+\[
+\Delta^k b_1=\frac1{k+1}+\frac1{(k+1)(k+2)}.
+\]
+欧拉变换后的级数
+\[
+\sum_{k=0}^{\infty}\frac{\Delta^k b_1}{2^{k+1}}
+\]
+被收敛级数
+\[
+\sum_{k=0}^{\infty}\frac{C}{(k+1)2^{k+1}}
+\]
+控制，所以原交错级数收敛。
+
+绝对值级数可用柯西凝聚判别法（Cauchy 凝聚判别法）。$b_n$ 正且递减，并且
+\[
+2^k b_{2^k}
+=\frac{2\cdot2^k+1}{2^k+1}\to2\ne0.
+\]
+凝聚级数发散，因此 $\sum b_n$ 发散。原级数条件收敛。
+
+### 解法 E：拆成标准交错调和级数
+
+先分解
+\[
+\frac{2n+1}{n(n+1)}=\frac1n+\frac1{n+1}.
+\]
+由于两个交错调和型级数都收敛，可以拆成
+\[
+S=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}n
++\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n+1}.
+\]
+利用标准结论
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}n=\ln2,
+\]
+第二项令 $m=n+1$，得
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n+1}
+=\sum_{m=2}^{\infty}\frac{(-1)^m}{m}
+=1-\ln2.
+\]
+所以
+\[
+S=1.
+\]
+绝对值级数仍为
+\[
+\sum_{n=1}^{\infty}\left(\frac1n+\frac1{n+1}\right),
+\]
+发散。因此原级数条件收敛。
+
+## 10. 参考答案
+
+### 半径、端点和和函数
+
+考虑
+\[
+\sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^n}{n+1}.
+\]
+由比值判别，收敛半径为 $1$。
+
+端点：
+
+- $x=1$ 时，$\sum_{n=1}^{\infty}(-1)^{n-1}\frac1{n+1}$ 收敛；
+- $x=-1$ 时，$\sum_{n=1}^{\infty}-\frac1{n+1}$ 发散。
+
+所以收敛域为
+\[
+(-1,1].
+\]
+
+在 $|x|<1$ 时，设
+\[
+S(x)=\sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^n}{n+1}.
+\]
+则
+\[
+xS(x)=\sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^{n+1}}{n+1}
+=\sum_{m=2}^{\infty}(-1)^m\frac{x^m}{m}.
+\]
+而
+\[
+\ln(1+x)=\sum_{m=1}^{\infty}(-1)^{m-1}\frac{x^m}{m},
+\]
+所以
+\[
+xS(x)=x-\ln(1+x).
+\]
+于是
+\[
+S(x)=\frac{x-\ln(1+x)}{x},\qquad -1<x<1,\ x\ne0.
+\]
+又 $S(0)=0$，且 $x=1$ 处由阿贝尔定理或直接取极限得到
+\[
+S(1)=1-\ln2.
+\]
+因此
+\[
+S(x)=
+\begin{cases}
+0, & x=0,\\[4pt]
+\dfrac{x-\ln(1+x)}{x}, & -1<x\le 1,\ x\ne0.
+\end{cases}
+\]
+
+## 11. 参考答案
+
+### 解法 A：一致狄利克雷判别法（Dirichlet 判别法）和分部积分
+
+#### （1）一致收敛
+
+对尾积分作变量代换 $t=xy$：
+\[
+\int_R^M\frac{\sin xy}{x}\,dx
+=\int_{Ry}^{My}\frac{\sin t}{t}\,dt.
+\]
+当 $y\in[2023,2024]$ 时，$Ry\ge 2023R$。由狄利克雷估计，
+\[
+\left|\int_A^B\frac{\sin t}{t}\,dt\right|\le \frac{2}{A}\qquad (0<A<B),
+\]
+故
+\[
+\left|\int_R^M\frac{\sin xy}{x}\,dx\right|
+\le \frac{2}{2023R}.
+\]
+右端与 $y$ 无关，且当 $R\to\infty$ 时趋于 $0$。所以
+\[
+\int_0^{+\infty}\frac{\sin xy}{x}\,dx
+\]
+在 $y\in[2023,2024]$ 上一致收敛。
+
+#### （2）计算积分
+
+记
+\[
+I=\int_0^{+\infty}\frac{\cos 2023x-\cos 2024x}{x^2}\,dx.
+\]
+分部积分，令
+\[
+u=\cos 2023x-\cos 2024x,\qquad dv=\frac{dx}{x^2}.
+\]
+边界项在 $0$ 与 $+\infty$ 都为 $0$，于是
+\[
+I=\int_0^{+\infty}\frac{-2023\sin 2023x+2024\sin 2024x}{x}\,dx.
+\]
+利用
+\[
+\int_0^{+\infty}\frac{\sin ax}{x}\,dx=\frac{\pi}{2}\qquad (a>0),
+\]
+得
+\[
+I=-2023\cdot\frac{\pi}{2}+2024\cdot\frac{\pi}{2}
+=\frac{\pi}{2}.
+\]
+
+### 解法 B：用标准公式
+
+也可直接用
+\[
+\int_0^{+\infty}\frac{1-\cos ax}{x^2}\,dx=\frac{\pi a}{2}\qquad (a>0).
+\]
+则
+\[
+\int_0^{+\infty}\frac{\cos 2023x-\cos 2024x}{x^2}\,dx
+=\frac{\pi}{2}(2024-2023)
+=\frac{\pi}{2}.
+\]
+
+### 解法 C：利用第（1）问交换积分次序
+
+由
+\[
+\int_{2023}^{2024}\sin(xy)\,dy
+=\left[-\frac{\cos(xy)}{x}\right]_{2023}^{2024}
+=\frac{\cos 2023x-\cos 2024x}{x},
+\]
+可得
+\[
+I=\int_0^{+\infty}\frac{1}{x}
+\left(\int_{2023}^{2024}\sin(xy)\,dy\right)dx.
+\]
+第（1）问已经给出
+\[
+\int_0^{+\infty}\frac{\sin xy}{x}\,dx
+\]
+在 $[2023,2024]$ 上一致收敛，因此可以交换积分次序：
+\[
+I=\int_{2023}^{2024}
+\left(\int_0^{+\infty}\frac{\sin xy}{x}\,dx\right)dy.
+\]
+对 $y>0$，狄利克雷积分
+\[
+\int_0^{+\infty}\frac{\sin xy}{x}\,dx=\frac{\pi}{2},
+\]
+所以
+\[
+I=\int_{2023}^{2024}\frac{\pi}{2}\,dy=\frac{\pi}{2}.
+\]
+
+### 解法 D：阿贝尔阻尼（Abel 阻尼）推导
+
+先说明第二问原积分在 $0$ 附近和无穷远处都收敛：$x\to0$ 时分子为 $O(x^2)$，无穷远处被 $C/x^2$ 控制。
+
+令 $a=2023,\ b=2024$，加阻尼因子
+\[
+I_\varepsilon=\int_0^\infty e^{-\varepsilon x}
+\frac{\cos ax-\cos bx}{x^2}\,dx.
+\]
+设
+\[
+H_\varepsilon(c)=\int_0^\infty e^{-\varepsilon x}
+\frac{\cos ax-\cos cx}{x^2}\,dx.
+\]
+则
+\[
+H_\varepsilon'(c)=\int_0^\infty e^{-\varepsilon x}\frac{\sin(cx)}{x}\,dx.
+\]
+记
+\[
+K_\varepsilon(c)=\int_0^\infty e^{-\varepsilon x}\frac{\sin(cx)}{x}\,dx.
+\]
+对 $c$ 求导：
+\[
+K_\varepsilon'(c)=\int_0^\infty e^{-\varepsilon x}\cos(cx)\,dx
+=\frac{\varepsilon}{\varepsilon^2+c^2},
+\]
+且 $K_\varepsilon(0)=0$，故
+\[
+K_\varepsilon(c)=\arctan\frac{c}{\varepsilon}.
+\]
+于是
+\[
+I_\varepsilon=\int_a^b\arctan\frac{c}{\varepsilon}\,dc
+\xrightarrow[\varepsilon\to0^+]{}\int_a^b\frac{\pi}{2}\,dc
+=\frac{\pi}{2}.
+\]
+
+### 解法 E：缩放化归到单个狄利克雷积分（Dirichlet 积分）
+
+第（1）问也可以直接用缩放说明一致性。对尾积分，
+\[
+\int_A^B\frac{\sin(xy)}{x}\,dx
+=\int_{Ay}^{By}\frac{\sin t}{t}\,dt.
+\]
+因为 $y\ge2023$，狄利克雷尾估计给出
+\[
+\left|\int_U^V\frac{\sin t}{t}\,dt\right|\le \frac{C}{U}.
+\]
+所以
+\[
+\left|\int_A^B\frac{\sin(xy)}{x}\,dx\right|
+\le \frac{C}{Ay}
+\le \frac{C}{2023A}\to0,
+\]
+从而一致收敛。
+
+第（2）问令
+\[
+K(c)=\int_0^\infty\frac{1-\cos(cx)}{x^2}\,dx.
+\]
+作代换 $t=cx$，得
+\[
+K(c)=cK(1).
+\]
+又由分部积分，
+\[
+K(1)=\int_0^\infty\frac{1-\cos t}{t^2}\,dt
+=\int_0^\infty\frac{\sin t}{t}\,dt
+=\frac{\pi}{2}.
+\]
+于是
+\[
+\int_0^\infty\frac{\cos 2023x-\cos 2024x}{x^2}\,dx
+=K(2024)-K(2023)
+=\frac{\pi}{2}.
+\]
+
+### 解法 F：拉普拉斯核（Laplace 核）表示
+
+也可用
+\[
+\frac1{x^2}=\int_0^\infty s e^{-sx}\,ds\qquad (x>0).
+\]
+令 $a=2023,\ b=2024$。由于原积分在 $0$ 附近和无穷远处绝对收敛，可交换积分：
+\[
+I=\int_0^\infty s
+\left(\int_0^\infty e^{-sx}(\cos ax-\cos bx)\,dx\right)ds.
+\]
+而
+\[
+\int_0^\infty e^{-sx}\cos(cx)\,dx=\frac{s}{s^2+c^2},
+\]
+所以
+\[
+I=\int_0^\infty s\left(\frac{s}{s^2+a^2}-\frac{s}{s^2+b^2}\right)ds.
+\]
+化简为
+\[
+I=(b^2-a^2)\int_0^\infty
+\frac{s^2}{(s^2+a^2)(s^2+b^2)}\,ds.
+\]
+该积分计算结果为
+\[
+\frac{\pi}{2(a+b)}.
+\]
+因此
+\[
+I=(b^2-a^2)\frac{\pi}{2(a+b)}
+=\frac{\pi}{2}(b-a)
+=\frac{\pi}{2}.
+\]
+
+## 12. 参考答案
+
+### 解法 A：分端点讨论
+
+积分
+\[
+\int_0^1\frac{\ln x}{1-x}\,dx
+\]
+只有 $x=0$ 和 $x=1$ 两端需要检查。
+
+当 $x\to1^-$ 时，
+\[
+\lim_{x\to1^-}\frac{\ln x}{1-x}=-1,
+\]
+所以 $x=1$ 不是不可积奇点。
+
+当 $x\to0^+$ 时，$1-x\sim 1$，被积函数与 $\ln x$ 同阶，而
+\[
+\int_0^{1/2}|\ln x|\,dx<\infty.
+\]
+因此该反常积分绝对收敛，当然收敛。
+
+### 进一步结果
+
+若需要积分值，可用
+\[
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n\qquad (0<x<1),
+\]
+得到
+\[
+\int_0^1\frac{\ln x}{1-x}\,dx
+=\sum_{n=0}^{\infty}\int_0^1x^n\ln x\,dx
+=-\sum_{n=1}^{\infty}\frac1{n^2}
+=-\frac{\pi^2}{6}.
+\]
+
+### 解法 B：指数代换
+
+令
+\[
+x=e^{-t}.
+\]
+当 $x:0\to1$ 时，$t:\infty\to0$，且 $dx=-e^{-t}dt$。于是
+\[
+\int_0^1\frac{\ln x}{1-x}\,dx
+=-\int_0^\infty\frac{t}{e^t-1}\,dt.
+\]
+判断敛散性只需看
+\[
+\int_0^\infty\frac{t}{e^t-1}\,dt.
+\]
+当 $t\to0^+$ 时，
+\[
+\frac{t}{e^t-1}\to1;
+\]
+当 $t\to+\infty$ 时，
+\[
+\frac{t}{e^t-1}\sim te^{-t},
+\]
+可积。因此原反常积分绝对收敛。
+
+### 解法 C：核表示与二重积分估计
+
+注意
+\[
+-\frac{\ln x}{1-x}
+=\int_0^1\frac{dt}{x+t(1-x)}.
+\]
+因此
+\[
+\left|\frac{\ln x}{1-x}\right|
+=\int_0^1\frac{dt}{x+t(1-x)}.
+\]
+又
+\[
+x+t(1-x)\ge x,\qquad x+t(1-x)\ge t,
+\]
+所以
+\[
+x+t(1-x)\ge \max(x,t).
+\]
+于是
+\[
+\int_0^1\left|\frac{\ln x}{1-x}\right|dx
+\le
+\int_0^1\int_0^1\frac{dt\,dx}{\max(x,t)}.
+\]
+右端分成 $t\le x$ 与 $t\ge x$ 两块：
+\[
+\int_0^1\int_0^x\frac{dt}{x}\,dx
++\int_0^1\int_x^1\frac{dt}{t}\,dx
+=1+1=2.
+\]
+因此原积分绝对收敛。
+
+### 解法 D：倒数代换
+
+令
+\[
+x=\frac1u.
+\]
+当 $x:0\to1$ 时，$u:\infty\to1$，整理得
+\[
+\int_0^1\frac{\ln x}{1-x}\,dx
+=-\int_1^\infty \frac{\ln u}{u(u-1)}\,du.
+\]
+只需判断右侧绝对收敛。
+
+当 $u\to1^+$ 时，
+\[
+\frac{\ln u}{u-1}\to1,
+\]
+故 integrand 在 $u=1$ 附近可积；当 $u\to+\infty$ 时，
+\[
+\frac{\ln u}{u(u-1)}\sim\frac{\ln u}{u^2},
+\]
+也可积。因此原积分绝对收敛。
+
+### 解法 E：全局不等式比较
+
+当 $0<x<1$ 时，$\ln x<0$。只需证明
+\[
+\int_0^1\frac{-\ln x}{1-x}\,dx<\infty.
+\]
+下面用一个全局不等式：
+\[
+-\ln x\le\frac{1-x}{\sqrt{x}},\qquad 0<x<1.
+\]
+令
+\[
+g(x)=\frac{1-x}{\sqrt{x}}+\ln x=x^{-1/2}-x^{1/2}+\ln x.
+\]
+则
+\[
+g'(x)=\frac{-1-x+2\sqrt{x}}{2x^{3/2}}
+=-\frac{(1-\sqrt{x})^2}{2x^{3/2}}\le0,
+\]
+且 $g(1)=0$。所以 $0<x<1$ 时 $g(x)\ge0$，即上面的不等式成立。
+
+于是
+\[
+0\le\frac{-\ln x}{1-x}\le\frac1{\sqrt{x}}.
+\]
+而
+\[
+\int_0^1x^{-1/2}\,dx=2<\infty.
+\]
+因此原反常积分绝对收敛。
+
+## 13. 参考答案
+
+### 解法 A：直接比较到单调数列的总增量
+
+因为 $\{a_n\}$ 单调递增且 $a_n>1$，所以原级数每一项非负，且
+\[
+\frac{1}{\sqrt{a_{n+1}}}\left(1-\frac{a_n}{a_{n+1}}\right)
+=\frac{a_{n+1}-a_n}{a_{n+1}^{3/2}}.
+\]
+又 $a_{n+1}>1$，所以
+\[
+0\le
+\frac{a_{n+1}-a_n}{a_{n+1}^{3/2}}
+\le a_{n+1}-a_n.
+\]
+而
+\[
+\sum_{n=1}^{N}(a_{n+1}-a_n)=a_{N+1}-a_1
+\]
+有界，因为 $\{a_n\}$ 单调递增且有界。由比较判别法，原级数收敛。
+
+### 解法 B：化为平方根数列的差分
+
+令
+\[
+u_n=\sqrt{a_n}.
+\]
+因为 $\{a_n\}$ 单调递增且有界，并且 $a_n>1$，所以 $\{u_n\}$ 也单调递增、有界，且 $u_n>1$。
+
+原级数第 $n$ 项为
+\[
+\frac{1}{\sqrt{a_{n+1}}}\left(1-\frac{a_n}{a_{n+1}}\right)
+=\frac{1}{u_{n+1}}\left(1-\frac{u_n^2}{u_{n+1}^2}\right)
+=\frac{u_{n+1}^2-u_n^2}{u_{n+1}^3}.
+\]
+即
+\[
+\frac{u_{n+1}^2-u_n^2}{u_{n+1}^3}
+=\frac{(u_{n+1}-u_n)(u_{n+1}+u_n)}{u_{n+1}^3}.
+\]
+由于 $u_n\le u_{n+1}$，
+\[
+0\le
+\frac{(u_{n+1}-u_n)(u_{n+1}+u_n)}{u_{n+1}^3}
+\le
+\frac{2u_{n+1}(u_{n+1}-u_n)}{u_{n+1}^3}
+=\frac{2(u_{n+1}-u_n)}{u_{n+1}^2}
+\le 2(u_{n+1}-u_n).
+\]
+而
+\[
+\sum_{n=1}^{N}(u_{n+1}-u_n)=u_{N+1}-u_1
+\]
+有界，所以由比较判别法，原级数收敛。
+
+### 解法 C：更强的望远镜控制
+
+还可以用
+\[
+\frac{u_{n+1}-u_n}{u_{n+1}^2}
+\le
+\frac{u_{n+1}-u_n}{u_nu_{n+1}}
+=\frac1{u_n}-\frac1{u_{n+1}}.
+\]
+于是第 $n$ 项满足
+\[
+0\le a_n^{(\mathrm{term})}
+\le 2\left(\frac1{u_n}-\frac1{u_{n+1}}\right).
+\]
+部分和被一个收敛的望远镜和控制：
+\[
+\sum_{n=1}^{N}a_n^{(\mathrm{term})}
+\le
+2\left(\frac1{u_1}-\frac1{u_{N+1}}\right)
+<\frac{2}{u_1}.
+\]
+所以原级数收敛。
+
+### 解法 D：对数相对增量法
+
+令
+\[
+r_n=\frac{a_{n+1}}{a_n}\ge 1.
+\]
+由于 $a_{n+1}>1$，
+\[
+0\le
+\frac{1}{\sqrt{a_{n+1}}}\left(1-\frac{a_n}{a_{n+1}}\right)
+\le
+1-\frac{a_n}{a_{n+1}}
+=1-\frac1{r_n}.
+\]
+而对 $r_n\ge1$，有
+\[
+1-\frac1{r_n}\le \ln r_n.
+\]
+于是
+\[
+\frac{1}{\sqrt{a_{n+1}}}\left(1-\frac{a_n}{a_{n+1}}\right)
+\le
+\ln\frac{a_{n+1}}{a_n}.
+\]
+部分和满足
+\[
+\sum_{n=1}^{N}\ln\frac{a_{n+1}}{a_n}
+=\ln a_{N+1}-\ln a_1.
+\]
+因为 $\{a_n\}$ 单调递增且有界，$\ln a_{N+1}$ 有上界，所以原级数由比较判别法收敛。
+
+### 解法 E：乘积视角的相对亏损法
+
+令
+\[
+x_n=1-\frac{a_n}{a_{n+1}}.
+\]
+由 $a_{n+1}\ge a_n>1$，有 $0\le x_n<1$。又因为 $a_{n+1}>1$，
+\[
+0\le
+\frac1{\sqrt{a_{n+1}}}\left(1-\frac{a_n}{a_{n+1}}\right)
+\le x_n.
+\]
+只需证明 $\sum x_n$ 收敛。
+
+对任意 $N$，
+\[
+\prod_{n=1}^{N}\frac1{1-x_n}
+=\prod_{n=1}^{N}\frac{a_{n+1}}{a_n}
+=\frac{a_{N+1}}{a_1}.
+\]
+另一方面，
+\[
+\frac1{1-x_n}\ge 1+x_n,
+\]
+且有限乘积展开中高阶项非负，所以
+\[
+\prod_{n=1}^{N}(1+x_n)\ge 1+\sum_{n=1}^{N}x_n.
+\]
+因此
+\[
+1+\sum_{n=1}^{N}x_n
+\le \frac{a_{N+1}}{a_1}.
+\]
+由于 $\{a_n\}$ 有界，右侧一致有界，所以 $\sum x_n$ 收敛，原级数收敛。

@@ -1,0 +1,55 @@
+# Exam Solution Notes
+
+这里放整理后的考试题解资料：题目、参考答案、详解、拓展讲解，以及适合下载阅读的 PDF。
+
+如果你只是想找资料，从 `materials/` 开始看。每套材料都会尽量保留 Markdown 源文件，PDF 则优先放在 GitHub Release 里，方便下载，也避免仓库被大文件撑大。
+
+## 现在有什么
+
+- [高数一（II）2023-06 期末](materials/gaoshu1-ii/2023-06-final/)：题目、参考答案、详解、拓展讲解和纠错清单。
+
+资料按课程和考试时间组织：
+
+```text
+materials/
+  gaoshu1-ii/
+    2023-06-final/
+      README.md
+      questions.md
+      answers.md
+      guided-solutions.md
+      teaching.md
+      corrections.md
+      manifest.json
+```
+
+命名优先使用实际考试月份，例如 `2023-06-final`。这比“23-24 学年第 2 学期”更容易搜索，也更适合长期维护。
+
+## 每套材料怎么看
+
+- `questions.md`：只有题目，适合先自己做。
+- `answers.md`：多解法参考答案，适合快速对答案、查思路，也保留有价值的不同方法。
+- `guided-solutions.md`：主线详解版，逐题展开一条推荐路径。
+- `teaching.md`：拓展讲解，放相似题型、方法迁移、常见坑和方法比较。
+- `corrections.md`：如果来源材料里有笔误或错解，这里记录本版怎么修正。
+- `manifest.json`：材料状态、来源页、生成产物等机器可读信息。
+
+## PDF 下载
+
+Markdown 是长期可维护的源文件。PDF 是给阅读和打印准备的生成品。
+
+推荐下载 GitHub Release 里的 PDF，例如：
+
+- 仅题目版；
+- 参考答案版；
+- 详解版；
+- 拓展讲解版；
+- 纠错清单。
+
+具体链接或上传状态会写在每套材料自己的 `README.md` 里。
+
+## 来源与质量
+
+这些材料来自原始 PDF 的清理、OCR、人工复核和重新排版。来源解析不会默认当成正确答案；答案会尽量独立求解，再参考来源材料做检查。
+
+如果你发现题目、公式、答案或讲解有问题，优先开 issue，并说明具体文件、题号和你认为有问题的位置。

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "material_slug": "gaoshu1-ii/2023-06-final",
+  "title": "高数一（II）2023-06 期末",
+  "course": "高等数学一（II）",
+  "exam_month": "2023-06",
+  "exam_type": "final",
+  "status": "public_release_pending_upload",
+  "source_note": "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2023-06。",
+  "files": {
+    "questions": {
+      "path": "questions.md",
+      "status": "reviewed"
+    },
+    "answers": {
+      "path": "answers.md",
+      "status": "multi_method_reference_checked_draft"
+    },
+    "guided_solutions": {
+      "path": "guided-solutions.md",
+      "status": "draft_with_unexpanded_reference_methods"
+    },
+    "teaching": {
+      "path": "teaching.md",
+      "status": "split_transfer_draft"
+    },
+    "corrections": {
+      "path": "corrections.md",
+      "status": "confirmed_correction_log"
+    }
+  },
+  "release": {
+    "tag": "gaoshu1-ii-2023-06-final-v1.0",
+    "assets": {
+      "questions": {
+        "filename": "questions.pdf",
+        "pages": 1,
+        "sha256": "d897aa5bfca5ca177208d3263e563345ae37d302a31acce6794b82de494ec783"
+      },
+      "answers": {
+        "filename": "answers.pdf",
+        "pages": 35,
+        "sha256": "e39682877e670ec893b159154cfb6ef2d23a8679f0576ab23090f6f3a9e1c426"
+      },
+      "guided-solutions": {
+        "filename": "guided-solutions.pdf",
+        "pages": 18,
+        "sha256": "516c7a051c33b15cd1f99cd04a6a5b8208629d2c00e56e3dc49834cd71a0ba09"
+      },
+      "teaching": {
+        "filename": "teaching.pdf",
+        "pages": 4,
+        "sha256": "9e4005901f5e100b42d2bacd0b8ad439ec4551627ca29ae9c8f8f4d228084873"
+      },
+      "corrections": {
+        "filename": "corrections.pdf",
+        "pages": 1,
+        "sha256": "46afd4a63594bb0e5f71ab57c5b65a117774663cad6f643e0d2c3e1326ddec48"
+      }
+    },
+    "status": "pending_upload",
+    "note": "PDF files were generated but GitHub release upload failed from this Agent because the available gh token lacks release write permission.",
+    "version": "v1.0",
+    "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes."
+  },
+  "quality_notes": [
+    "questions.md 已由用户复核通过。",
+    "answers.md 为多解法参考答案草稿，已做独立解题和来源解析 reference-check，但尚未逐字人工数学审定。",
+    "guided-solutions.md 为详解草稿，已展开主线，并列出尚未展开的参考解法；后续可继续补充选讲备用解法。",
+    "teaching.md 已收敛为拓展迁移草稿。",
+    "corrections.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。"
+  ]
+}

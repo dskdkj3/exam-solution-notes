@@ -1,0 +1,14 @@
+# Local build output
+/dist/
+/tmp/
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Keep reader-facing PDFs out of normal commits unless a material README says otherwise.
+*.pdf
+*.zip
