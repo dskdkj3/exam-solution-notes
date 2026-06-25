@@ -1,5 +1,6 @@
 ---
-title: "高数一（II）2023-06 期末"
+title: "2023-06 高等数学一（II）期末真题"
+display_title: "2023-06 高等数学一（II）期末真题"
 course: "高等数学一（II）"
 exam_month: "2023-06"
 source_note: "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2023-06。"
@@ -11,9 +12,9 @@ extraction_reviewer: "user"
 kind: "questions_only"
 ---
 
-# 高数一（II）2023-06 期末（仅题目）
+# 2023-06 高等数学一（II）期末真题（仅题目）
 
-> 状态：reviewed。本文从清理草稿派生，仅保留题目；用户已逐题复核通过。
+> 状态：reviewed。本文从清理稿派生，仅保留题目；用户已逐题复核通过。
 
 ## 1. 题目
 
@@ -83,7 +84,7 @@ $$\int_L (x+y)\,ds,$$
 
 求幂级数 $\displaystyle \sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^n}{n+1}$ 的收敛域与和函数
 
-## 11. 题目
+## 11. 参数反常积分：一致收敛与积分计算
 
 > 状态：reviewed；source_pages: [6]
 

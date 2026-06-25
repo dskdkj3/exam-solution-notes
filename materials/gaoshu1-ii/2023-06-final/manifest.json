@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "material_slug": "gaoshu1-ii/2023-06-final",
-  "title": "高数一（II）2023-06 期末",
+  "title": "2023-06 高等数学一（II）期末真题",
   "course": "高等数学一（II）",
   "exam_month": "2023-06",
   "exam_type": "final",
@@ -22,7 +22,7 @@
     },
     "teaching": {
       "path": "teaching.md",
-      "status": "split_transfer_draft"
+      "status": "selective_transfer_draft"
     },
     "corrections": {
       "path": "corrections.md",
@@ -34,40 +34,41 @@
     "assets": {
       "questions": {
         "filename": "questions.pdf",
-        "pages": 1,
-        "sha256": "d897aa5bfca5ca177208d3263e563345ae37d302a31acce6794b82de494ec783"
+        "pages": 2,
+        "sha256": "7e35998febaff476131c28d6324cca585944f294195c5790c3dc42525ec1746e"
       },
       "answers": {
         "filename": "answers.pdf",
         "pages": 35,
-        "sha256": "e39682877e670ec893b159154cfb6ef2d23a8679f0576ab23090f6f3a9e1c426"
+        "sha256": "efeff4c1c3a829b8ce485193c3e7c5872ea4de3947282f72269cccef08ca5b26"
       },
       "guided-solutions": {
         "filename": "guided-solutions.pdf",
         "pages": 18,
-        "sha256": "516c7a051c33b15cd1f99cd04a6a5b8208629d2c00e56e3dc49834cd71a0ba09"
+        "sha256": "2bab1bc96da9f45d65f2ebdf83cd74f1f1c266551ced026281b7d484963bc51a"
       },
       "teaching": {
         "filename": "teaching.pdf",
         "pages": 4,
-        "sha256": "9e4005901f5e100b42d2bacd0b8ad439ec4551627ca29ae9c8f8f4d228084873"
+        "sha256": "3680b2d6a1bdc4ab751497a424a060814049a0a766ac13cf31c956fb35f6fe01"
       },
       "corrections": {
         "filename": "corrections.pdf",
         "pages": 1,
-        "sha256": "46afd4a63594bb0e5f71ab57c5b65a117774663cad6f643e0d2c3e1326ddec48"
+        "sha256": "9a717a8327a1c7ccb010be553c2f705439a1f0dfd47d9c68400434af769eab1c"
       }
     },
     "status": "pending_upload",
-    "note": "PDF files were generated but GitHub release upload failed from this Agent because the available gh token lacks release write permission.",
+    "note": "PDF files generated and staged for GitHub Release upload.",
     "version": "v1.0",
     "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes."
   },
   "quality_notes": [
     "questions.md 已由用户复核通过。",
-    "answers.md 为多解法参考答案草稿，已做独立解题和来源解析 reference-check，但尚未逐字人工数学审定。",
-    "guided-solutions.md 为详解草稿，已展开主线，并列出尚未展开的参考解法；后续可继续补充选讲备用解法。",
-    "teaching.md 已收敛为拓展迁移草稿。",
-    "corrections.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。"
+    "answers.md 为多解法参考答案，已做独立解题和来源解析 reference-check，但尚未逐字人工数学审定。",
+    "guided-solutions.md 为详解版，已展开主线，并列出尚未展开的参考解法；后续可继续补充选讲备用解法。",
+    "teaching.md 已改为精选拓展迁移版，不强行逐题占位。",
+    "corrections.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。",
+    "PDF 可见题头已使用 2023-06 公开题名；第 11 题两小问在预览中分行保留。"
   ]
 }

@@ -1,5 +1,6 @@
 ---
-title: "高数一（II）2023-06 期末"
+title: "2023-06 高等数学一（II）期末真题"
+display_title: "2023-06 高等数学一（II）期末真题"
 course: "高等数学一（II）"
 exam_month: "2023-06"
 source_note: "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2023-06。"
@@ -14,9 +15,9 @@ reference_check_status: "completed_unreviewed_source"
 kind: "independent_answers"
 ---
 
-# 高数一（II）2023-06 期末多解法参考答案草稿
+# 2023-06 高等数学一（II）期末真题多解法参考答案
 
-> 状态：reference_checked_draft。本文先基于已复核通过的 `questions.md` 独立解题，并保留多种有价值的参考解法，随后按用户授权参考未复核的 来源解析做 reference-check。来源解析仍不视为权威答案。
+> 状态：reference_checked_draft。本文先基于已复核通过的 `questions.md` 独立解题，并保留多种有价值的参考解法，随后按用户授权参考未复核的来源解析做 reference-check。来源解析仍不视为权威答案。
 
 ## 1. 参考答案
 
