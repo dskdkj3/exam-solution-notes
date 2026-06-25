@@ -5,7 +5,7 @@
   "course": "高等数学一（II）",
   "exam_month": "2024-06",
   "exam_type": "final",
-  "status": "public_release_pending_upload",
+  "status": "published",
   "source_note": "原始 PDF 未随仓库发布；题目文本由扫描 PDF OCR、整理并经人工复核。考试月份按下学期期末时间推定为 2024-06。",
   "files": {
     "questions": {
@@ -31,35 +31,45 @@
   },
   "release": {
     "tag": "gaoshu1-ii-2024-06-final-v1.0",
+    "url": "https://github.com/dskdkj3/exam-solution-notes/releases/tag/gaoshu1-ii-2024-06-final-v1.0",
     "assets": {
       "questions": {
         "filename": "2024-06-gaoshu1-ii-final-questions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "pages": 2,
         "sha256": "27f12e4fe19c1776c3d10c6434a650545df142023726cec72fa4ff65092e7d4c"
       },
       "answers": {
         "filename": "2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
         "pages": 35,
         "sha256": "b7b59a8190701ba6657c2384a271528868fcf650c6c61fccb8eac142faafcb92"
       },
       "guided-solutions": {
         "filename": "2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
         "pages": 17,
         "sha256": "952f624a9ca70f41ae7f55f768aea78638b454e877925dc7c8cca1cbaabe12d5"
       },
       "teaching": {
         "filename": "2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "pages": 4,
         "sha256": "cf8eed1fbe688e42123706f5a8e515f4c5c7b5dd6788870af48dfd1dbccd68e7"
       },
       "corrections": {
         "filename": "2024-06-gaoshu1-ii-final-errata-v1.0.pdf",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "pages": 1,
         "sha256": "174ae88c3050d1b4c3f140be933f9864e03eb0ef373978c9c68cdc0969ac7eea"
+      },
+      "sha256sums": {
+        "filename": "SHA256SUMS.txt",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/SHA256SUMS.txt"
       }
     },
-    "status": "pending_upload",
-    "note": "PDF files generated and staged for GitHub Release upload. Release asset filenames are ASCII-safe because GitHub may rewrite non-ASCII asset names and cause filename collisions.",
+    "status": "published",
+    "note": "PDF files published as GitHub Release assets. Release asset filenames are ASCII-safe because GitHub may rewrite non-ASCII asset names and cause filename collisions.",
     "version": "v1.0",
     "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes.",
     "metadata_audit": {

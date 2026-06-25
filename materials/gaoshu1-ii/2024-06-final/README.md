@@ -14,11 +14,13 @@
 
 ## PDF 下载
 
-PDF 已重新生成，计划作为 GitHub Release assets 发布；当前 release 尚未创建。
+PDF 已作为 GitHub Release assets 发布：
+
+<https://github.com/dskdkj3/exam-solution-notes/releases/tag/gaoshu1-ii-2024-06-final-v1.0>
 
 GitHub 会改写包含特殊字符或非 ASCII 字符的 release asset 文件名。为了避免中文 PDF 文件名在上传时被清洗成同名，实际上传的 PDF asset 使用 ASCII 文件名；中文标题和用途说明保留在 README 和 release notes 里。
 
-计划 release tag：
+Release tag：
 
 ```text
 gaoshu1-ii-2024-06-final-v1.0
@@ -26,13 +28,14 @@ gaoshu1-ii-2024-06-final-v1.0
 
 `v1.0` 表示第一次公开发布版本；答案和详解的数学审定状态仍以下方“当前状态”为准。
 
-计划 assets：
+PDF assets：
 
-- `2024-06-gaoshu1-ii-final-questions-v1.0.pdf`：仅题目版，2 页
-- `2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf`：参考答案版
-- `2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf`：详解版
-- `2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf`：拓展讲解版
-- `2024-06-gaoshu1-ii-final-errata-v1.0.pdf`：纠错清单
+- [仅题目版](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-questions-v1.0.pdf)：2 页
+- [多解法参考答案版](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf)
+- [详解版](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf)
+- [拓展讲解版](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf)
+- [纠错清单](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-errata-v1.0.pdf)
+- [SHA256SUMS.txt](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/SHA256SUMS.txt)
 
 ## 当前状态
 
