@@ -61,7 +61,12 @@
     "status": "pending_upload",
     "note": "PDF files generated and staged for GitHub Release upload.",
     "version": "v1.0",
-    "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes."
+    "version_note": "v1.0 is the first public release package; mathematical certification status is tracked separately in file statuses and quality_notes.",
+    "metadata_audit": {
+      "status": "audited_not_cleaned",
+      "tool": "mat2 --show",
+      "note": "Audit found generic Brave/Skia renderer metadata and timestamps, without local paths or usernames. A mat2 inplace cleanup attempt stripped the useful text layer, so release assets keep the rendered searchable PDFs until a non-destructive cleanup path is chosen."
+    }
   },
   "quality_notes": [
     "01-仅题目.md 已由用户复核通过。",
@@ -69,6 +74,7 @@
     "03-详解.md 为详解版，已展开主线，并移除机械的未展开参考解法清单；后续可继续补充真正值得选讲的备用解法。",
     "04-拓展讲解.md 已改为精选拓展迁移版，不强行逐题占位。",
     "05-纠错清单.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。",
-    "PDF 可见题头已使用 2024-06 公开题名；第 11 题两小问在预览中分行保留。"
+    "PDF 可见题头已使用 2024-06 公开题名；第 11 题两小问在预览中分行保留。",
+    "PDF 元数据已用 mat2 --show 审计；未发现本地路径或用户名。未采用 mat2 --inplace 清理版，因为会损失文本提取层。"
   ]
 }
