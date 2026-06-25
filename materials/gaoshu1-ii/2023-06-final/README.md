@@ -14,21 +14,23 @@
 
 ## PDF 下载
 
-PDF 放在 GitHub Release 里，适合下载、打印或转发：
+PDF 已生成，计划作为 GitHub Release assets 发布；当前 release 上传受本机 `gh` token 权限限制，暂未创建。
 
-- [questions.pdf](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2023-06-final-v1.0/questions.pdf)：仅题目版
-- [answers.pdf](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2023-06-final-v1.0/answers.pdf)：参考答案版
-- [guided-solutions.pdf](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2023-06-final-v1.0/guided-solutions.pdf)：详解版
-- [teaching.pdf](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2023-06-final-v1.0/teaching.pdf)：拓展讲解版
-- [corrections.pdf](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2023-06-final-v1.0/corrections.pdf)：纠错清单
-
-Release tag：
+计划 release tag：
 
 ```text
 gaoshu1-ii-2023-06-final-v1.0
 ```
 
 `v1.0` 表示第一次公开发布版本；答案和详解的数学审定状态仍以下方“当前状态”为准。
+
+计划 assets：
+
+- `questions.pdf`：仅题目版
+- `answers.pdf`：参考答案版
+- `guided-solutions.pdf`：详解版
+- `teaching.pdf`：拓展讲解版
+- `corrections.pdf`：纠错清单
 
 ## 当前状态
 
