@@ -36,6 +36,7 @@ PDF assets：
 - [拓展讲解版](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf)
 - [纠错清单](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-errata-v1.0.pdf)
 - [SHA256SUMS.txt](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/SHA256SUMS.txt)
+- [全套 PDF ZIP](https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%80%EF%BC%88II%EF%BC%89%E6%9C%9F%E6%9C%AB%E7%9C%9F%E9%A2%98-%E5%85%A8%E5%A5%97PDF-rhxcqx-v1.0.zip)
 
 ## 当前状态
 
@@ -44,6 +45,7 @@ PDF assets：
 - 详解：已展开主线，并清理了机械的“未展开参考解法”尾段；尚未逐字人工数学审定，后续可继续补充真正值得选讲的备用解法。
 - 拓展讲解：已改为精选迁移笔记，不再按每题模板硬写；尚未逐字人工数学审定。
 - 已知纠错：第 3 题来源解析中的傅里叶级数和函数写法有错误，见 `05-纠错清单.md`。
+- PDF：已统一为 Chrome/Skia + `print.css` 样式，带低调页眉、页脚和页码；浏览器默认路径/日期页眉页脚保持禁用。
 
 ## 文件状态
 

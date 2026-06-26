@@ -37,35 +37,41 @@
         "filename": "2024-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "pages": 2,
-        "sha256": "27f12e4fe19c1776c3d10c6434a650545df142023726cec72fa4ff65092e7d4c"
+        "sha256": "f6b7246807855907a3613accec1f5ab75391b50b6bf481f92445398a0df9c16b"
       },
       "answers": {
         "filename": "2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
-        "pages": 35,
-        "sha256": "b7b59a8190701ba6657c2384a271528868fcf650c6c61fccb8eac142faafcb92"
+        "pages": 36,
+        "sha256": "d57f9513928547c2749fe02aeb6eb4471e47f1219d6cdde478c5aa5128bc54c9"
       },
       "guided-solutions": {
         "filename": "2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
         "pages": 17,
-        "sha256": "952f624a9ca70f41ae7f55f768aea78638b454e877925dc7c8cca1cbaabe12d5"
+        "sha256": "51a3c104aee81e660fdcd05d2d54ebd5581fa71959f832b5ee4751d83e32f09b"
       },
       "teaching": {
         "filename": "2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "pages": 4,
-        "sha256": "cf8eed1fbe688e42123706f5a8e515f4c5c7b5dd6788870af48dfd1dbccd68e7"
+        "sha256": "20c27b91831233cfc74069ab860f58ba7501878352ec2fb2fca0558b27a59743"
       },
       "corrections": {
         "filename": "2024-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "pages": 1,
-        "sha256": "174ae88c3050d1b4c3f140be933f9864e03eb0ef373978c9c68cdc0969ac7eea"
+        "sha256": "80ea63120d7ad5bd716a93bea071c4f05cb62f5c00574e53f559ce207f5da21b"
       },
       "sha256sums": {
         "filename": "SHA256SUMS.txt",
-        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/SHA256SUMS.txt"
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/SHA256SUMS.txt",
+        "sha256": "3a4bb862d19ae6e09289c9c86dc47a25dca58c44d7557e06eb9a37ceb6c06fb8"
+      },
+      "bundle_zip": {
+        "filename": "2024-06-高等数学一（II）期末真题-全套PDF-rhxcqx-v1.0.zip",
+        "sha256": "65afd23b01ec87992744adfb093f73a49df14c40dd15c4990c3ba3099912f784",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2024-06-final-v1.0/2024-06-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%80%EF%BC%88II%EF%BC%89%E6%9C%9F%E6%9C%AB%E7%9C%9F%E9%A2%98-%E5%85%A8%E5%A5%97PDF-rhxcqx-v1.0.zip"
       }
     },
     "status": "published",
@@ -75,7 +81,8 @@
     "metadata_audit": {
       "status": "audited_not_cleaned",
       "tool": "mat2 --show",
-      "note": "Audit found generic Brave/Skia renderer metadata and timestamps, without local paths or usernames. A mat2 inplace cleanup attempt stripped the useful text layer, so release assets keep the rendered searchable PDFs until a non-destructive cleanup path is chosen."
+      "checked_at": "2026-06-26T18:41:35+08:00",
+      "note": "Audit found generic Chrome/Skia renderer metadata, short PDF titles, and creation/modification timestamps; no local paths, usernames, private URLs, tokens, comments, hidden attachments, or JavaScript were observed. Release assets keep searchable rendered PDFs; no destructive mat2 cleanup was applied."
     }
   },
   "quality_notes": [
@@ -85,6 +92,7 @@
     "04-拓展讲解.md 已改为精选拓展迁移版，不强行逐题占位。",
     "05-纠错清单.md 记录第 3 题来源解析中傅里叶级数和函数相关错误。",
     "PDF 可见题头已使用 2024-06 公开题名；第 11 题两小问在预览中分行保留。",
-    "PDF 元数据已用 mat2 --show 审计；未发现本地路径或用户名。未采用 mat2 --inplace 清理版，因为会损失文本提取层。"
+    "PDF 已统一为 Chrome/Skia + print.css 样式，并加入低调的 CSS 页眉、页脚和页码；Chromium 默认路径/日期页眉页脚保持禁用。",
+    "PDF 元数据已用 mat2 --show 审计；只发现通用 Chrome/Skia 生成器、短标题和时间戳，未发现本地路径、用户名、私有 URL 或 token；未做会损失文本层的清理。"
   ]
 }
