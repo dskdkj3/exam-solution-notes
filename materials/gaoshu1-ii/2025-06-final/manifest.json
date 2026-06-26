@@ -127,54 +127,54 @@
       "questions": {
         "filename": "2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
-        "pages": 5,
-        "sha256": "36964af3a52d0e3c3210c4f3aacf373d811866331d65f65a421020939467117d"
+        "pages": 3,
+        "sha256": "a2e141cc8bbb9f53b2e72284704afaed7ad04a43dc615033e788ad231d06649b"
       },
       "reference_solutions": {
         "filename": "2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
-        "pages": 20,
-        "sha256": "82646b30d6357a67ef752dcba44f0077c37507962cff3243e50b1849f974dfbc"
+        "pages": 17,
+        "sha256": "e0b9f56d0d5cb0b1fb849c4bba837e6d539a40668a972143a1457bdf99d99a13"
       },
       "guided_solutions": {
         "filename": "2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
-        "pages": 29,
-        "sha256": "e44da22d2a846c3166cb442a5086ae330c473eef19eb9307562f94c9dabb4639"
+        "pages": 26,
+        "sha256": "eda083e89d54364b63d6ca2694bd479d750f65a9d3b9c8a685d66524ef1ffb8c"
       },
       "teaching_notes": {
         "filename": "2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
-        "pages": 9,
-        "sha256": "0e2cbd32a252f091ac29d17a5abff991bffcc4dff99af1b042c9e92e8d0fbe47"
+        "pages": 7,
+        "sha256": "127db4649a5c4b1c2fc9df0b67e76002452d38fe6cf6b2a239f6754517f0f369"
       },
       "variants": {
         "filename": "2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
         "pages": 3,
-        "sha256": "e5f2e29f39be1a843a6d6adaa62b639d59f758254d321a79d7bb5b83e32107aa"
+        "sha256": "a9b936ef373b9644c9e73c49a44d89446f4fec26b159827d38bd8d11be2fd1e2"
       },
       "errata": {
         "filename": "2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "pages": 1,
-        "sha256": "7aba42bb85295fca8a66ab1eeca7094745fdcd897060539605b7faeb89c53c83"
+        "sha256": "de45e8264b93310c31c4136fe1dc8c3e37378a3ea9db9fa22e09cd59bab6f0a4"
       },
       "sha256sums": {
         "filename": "SHA256SUMS.txt",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/SHA256SUMS.txt",
-        "sha256": "c2a02b6046c9bf50c0d2ecdc17e26d7e3614a079dbf5a8f9d8d7f6a51625bc78"
+        "sha256": "d3e891be432f588fd13fa81eb5eb0a7cd4656c2c1adb3f1a9352809f339b64db"
       },
       "bundle_zip": {
         "filename": "2025-06-高等数学一（II）期末真题（B卷）-全套PDF-rhxcqx-v1.0.zip",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%80%EF%BC%88II%EF%BC%89%E6%9C%9F%E6%9C%AB%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7%EF%BC%89-%E5%85%A8%E5%A5%97PDF-rhxcqx-v1.0.zip",
-        "sha256": "d6c80afba036644e449fd5dbffc52078c7c0a2224f95540acf4ad03a8e590c87"
+        "sha256": "33047054fbebc14c872f37acea5ec19c26c94cd5e60451e8b7080c2c364ee5c8"
       }
     },
     "metadata_audit": {
       "status": "audited_not_cleaned",
       "tool": "mat2 --show",
-      "checked_at": "2026-06-26T18:41:35+08:00",
+      "checked_at": "2026-06-26T18:51:58+08:00",
       "note": "Audit found generic Chrome/Skia renderer metadata, short PDF titles, and creation/modification timestamps; no local paths, usernames, private URLs, tokens, comments, hidden attachments, or JavaScript were observed. Release assets keep searchable rendered PDFs; no destructive mat2 cleanup was applied."
     }
   },
@@ -186,6 +186,7 @@
     "参考答案已对第 11-16 题补跑一题一个独立 subagent 的不同解法审查；采纳路线写入答案，拒收路线保留在工作区记录。",
     "PDF 已统一为 Chrome/Skia + print.css 样式，并加入低调的 CSS 页眉、页脚和页码；Chromium 默认路径/日期页眉页脚保持禁用。",
     "第 6-10 题填空题题头按原题空格句式或题面原文片段呈现，不使用自造题型标题。",
-    "PDF 元数据已用 mat2 --show 审计；只发现通用 Chrome/Skia 生成器、短标题和时间戳，未发现本地路径、用户名、私有 URL 或 token；未做会损失文本层的清理。"
+    "PDF 元数据已用 mat2 --show 审计；只发现通用 Chrome/Skia 生成器、短标题和时间戳，未发现本地路径、用户名、私有 URL 或 token；未做会损失文本层的清理。",
+    "PDF 和仅题目 Markdown 的题头已改为直接使用题干正文，不再使用压缩题型摘要后重复题干。"
   ]
 }
