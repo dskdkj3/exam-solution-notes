@@ -73,18 +73,48 @@
   },
   "alternate_method_policy": {
     "max_rounds_per_problem": 10,
-    "status": "completed_agent_pass",
+    "status": "completed_agent_pass_with_subagent_remediation",
+    "context_policy": "initial pass was root-agent isolated reasoning; remediation pass used one independent subagent per solution problem 11-16",
+    "accepted_remediation_methods": {
+      "q011": [
+        "截面积几何分解"
+      ],
+      "q012": [
+        "凑全微分与面积公式"
+      ],
+      "q013": [
+        "对数不等式法"
+      ],
+      "q014": [
+        "同一展开取 x=1"
+      ],
+      "q015": [
+        "不变量直构法"
+      ],
+      "q016": [
+        "三类余数拆分"
+      ]
+    },
     "rejected_methods": [
       "q002-r001",
-      "q015-r001"
+      "q011-r001",
+      "q011-r002",
+      "q012-r001",
+      "q013-r001",
+      "q014-r001",
+      "q014-r002",
+      "q015-r001",
+      "q015-r002",
+      "q016-r001"
     ]
   },
   "pdf_generation": {
-    "renderer": "pandoc 3.7.0.2 + xelatex/ctexart",
+    "renderer": "pandoc 3.7.0.2 + xelatex/ctexart; A4 11pt; geometry margin=20mm; pagestyle=plain",
     "status": "built",
+    "design_standard": "study-material-extraction/DESIGN.md",
     "metadata_audit": {
       "status": "audited_not_cleaned",
-      "tool": "mat2 --show",
+      "tool": "mat2 --show via nixpkgs#mat2",
       "note": "Audit found generic LaTeX/pandoc/xdvipdfmx metadata and timestamps, without local paths, usernames, private URLs, or tokens."
     }
   },
@@ -98,41 +128,46 @@
         "filename": "2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-questions-v1.0.pdf",
         "pages": 6,
-        "sha256": "24363143e0b925de9ff440c60f5dbf02e4866d0f2f0f9ab239175bd21a63b3e6"
+        "sha256": "d8b8cbbfc12145ef65ae973111df68a7c7f79566b350cd3fb160d676bf7efe6c"
       },
       "reference_solutions": {
         "filename": "2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-reference-solutions-v1.0.pdf",
-        "pages": 17,
-        "sha256": "2fa779a8d8cc728c72e051109903d0a830ac9963a9c8bc1df850d6e680966122"
+        "pages": 21,
+        "sha256": "cf9cc407d47502d5bca40aab3879c09c5eab2452e37c0200f29e5b9b6722f965"
       },
       "guided_solutions": {
         "filename": "2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-guided-solutions-v1.0.pdf",
-        "pages": 28,
-        "sha256": "1fc8df0c9b43f45fe8b4a5e9b43063d82f5751d0900f1f5156cd43be65cfeed7"
+        "pages": 32,
+        "sha256": "a38ecdd89544f4cbf24e2f2c9738d3f8fffcce00a90185cf6d037c077659f79e"
       },
       "teaching_notes": {
         "filename": "2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-teaching-notes-v1.0.pdf",
         "pages": 9,
-        "sha256": "7242c392ed25eb0a4bd9eae6bc8b4155f4303ec89f7d784e99d959fefcddf3e2"
+        "sha256": "98cb6c85260ad0968f6e154fb81fa482714ab41ca7f5f4dc0b9313e5199964a4"
       },
       "variants": {
         "filename": "2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-variants-v1.0.pdf",
         "pages": 3,
-        "sha256": "eb92bfa9b68877e1d032a45f94c502fe9c309577a9fe74cf5a4228b61c6b6e51"
+        "sha256": "80f838b385b2a20eac49edd87ae3999cd723a9b77d0fee01e6afe3047f354b3d"
       },
       "errata": {
         "filename": "2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-gaoshu1-ii-final-errata-v1.0.pdf",
         "pages": 1,
-        "sha256": "307431de68ec338397ec7c40ba4c67112bf96973dd75707fa1d6cf69573dadd2"
+        "sha256": "0decb248140a8dd0acf8b3ee293c6a6c27d5915018b713372b91c688d7390a7a"
       },
       "sha256sums": {
         "filename": "SHA256SUMS.txt",
         "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/SHA256SUMS.txt"
+      },
+      "bundle_zip": {
+        "filename": "2025-06-高等数学一（II）期末真题（B卷）-全套PDF-rhxcqx-v1.0.zip",
+        "url": "https://github.com/dskdkj3/exam-solution-notes/releases/download/gaoshu1-ii-2025-06-final-v1.0/2025-06-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%80%EF%BC%88II%EF%BC%89%E6%9C%9F%E6%9C%AB%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7%EF%BC%89-%E5%85%A8%E5%A5%97PDF-rhxcqx-v1.0.zip",
+        "sha256": "f3083fb2824cafddded092d6a0c00b7a220bba43d7b24dd72300e6d6802ef267"
       }
     }
   },
@@ -140,6 +175,8 @@
     "题面为 agent_checked_draft，尚未声明人工逐字审定。",
     "答案先独立求解，再用来源解析做非权威 reference-check。",
     "主卷是 B 卷；第 10、15 题 A 卷变体单独保留。",
-    "第 16 题来源解析特征根笔误已在纠错清单记录。"
+    "第 16 题来源解析特征根笔误已在纠错清单记录。",
+    "参考答案已对第 11-16 题补跑一题一个独立 subagent 的不同解法审查；采纳路线写入答案，拒收路线保留在工作区记录。",
+    "PDF 版式按 DESIGN.md 统一为 A4、11pt、20mm 页边距和 plain 页码。"
   ]
 }
